@@ -1,10 +1,13 @@
 .textleft{
 	left: 70px;
+	position: relative;
 }
 .titlelabel{
-	position: relative;
 	top:30px;
 	font-size: 15px;
 	font-weight: 700;
 	width: 111px;
+}
+.label1{
+	top:60px;
 }
