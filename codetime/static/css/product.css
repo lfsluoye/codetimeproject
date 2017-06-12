@@ -1,13 +1,42 @@
-.textleft{
-	left: 70px;
+.textleft70 {
+    left: 20px;
+    position: relative;
+    top: 10px;
+}
+
+.titlelabel {
+    
+    width: 100%;
+    height: 40px;
+}
+
+.label1 {
+    top: 40px;
+}
+.inputStyle{
+	width: 300px;
+	height: 50px;
+}
+.base1{
+	height: 100%;
+	width: 40%;
 	position: relative;
+	left: 0;
+	top: 0;
 }
-.titlelabel{
-	top:30px;
-	font-size: 15px;
-	font-weight: 700;
-	width: 111px;
+.base2, .base3{
+	height: 100%;
+	width: 30%;
+	
 }
-.label1{
-	top:60px;
+.base2{
+	position: relative;
+	left:355;
+	background-color: blue;
+}
+.base3{
+	position: relative;
+	top: 0;
+	right: 0;
+	background-color: red;
 }
