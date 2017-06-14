@@ -13,30 +13,45 @@
 .label1 {
     top: 40px;
 }
-.inputStyle{
-	width: 300px;
-	height: 50px;
-}
+
 .base1{
 	height: 100%;
 	width: 40%;
 	position: relative;
 	left: 0;
 	top: 0;
+	display: inline-block;
 }
 .base2, .base3{
+	display: inline-block;
 	height: 100%;
-	width: 30%;
-	
+	width: 29%;
 }
 .base2{
 	position: relative;
-	left:355;
-	background-color: blue;
+	top: 0;
 }
 .base3{
 	position: relative;
 	top: 0;
-	right: 0;
-	background-color: red;
+}
+.bodyone1{
+	width: 70%;
+	height: 100%;
+	float: left;
+}
+.bodyone2{
+	width: 30%;
+	height: 100%;
+	float: right;
+}
+.parsePostion{
+	width: 95%;
+	height: 94%;
+	background-color: white;
+}
+.bottomBtn{
+	position: relative;
+	margin-left: 800px;
+	width: 200px;
 }

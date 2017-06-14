@@ -33,6 +33,10 @@
         </div>
         <div class="contentview">
             <div class="contenthead">
+                <ol class="breadcrumb">
+                    <li><a href="#">首页</a></li>
+                    <li class="active">生产单</li>
+                </ol>
             </div>
             <form class="form-horizontal">
                 <div class="contentbody">
@@ -43,47 +47,189 @@
                         <div class="baseinfo">
                             <div class="base1">
                                 <div class="form-group">
-                                    <label for="inputEmail3" class="col-sm-3 control-label">客户:</label>
+                                    <label for="text1" class="col-sm-3 control-label input-sm">客户:</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control input-sm" id="text1" placeholder="请输入">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputPassword3" class="col-sm-3 control-label">地址:</label>
+                                    <label for="text2" class="col-sm-3 control-label input-sm">地址:</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control input-sm" id="text2" placeholder="请输入">
+                                        <input type="text" class="form-control" id="text2" placeholder="请输入">
                                     </div>
                                 </div>
                             </div>
                             <div class="base2">
-                               <!--  <div class="form-group">
-                                    <label for="dtp_input1" class="col-sm-1 control-label">下单日期:</label>
-                                    <div class="input-group date form_date col-sm-2" data-date="" data-date-format=" yyyy-mm-dd" data-link-field="dtp_input1" data-link-format="yyyy-mm-dd">
+                                <div class="form-group">
+                                    <label for="dtp_input1" class="col-sm-4 control-label input-sm">下单日期:</label>
+                                    <div class="input-group date form_date col-sm-7" data-date="" data-date-format=" yyyy-mm-dd" data-link-field="dtp_input1" data-link-format="yyyy-mm-dd">
                                         <input class="form-control" size="16" type="text" value="" readonly>
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="dtp_input2" class="col-sm-1 control-label">交货日期:</label>
-                                    <div class="input-group date form_date col-sm-2" data-date="" data-date-format=" yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                    <label for="dtp_input2" class="col-sm-4 control-label input-sm">交货日期:</label>
+                                    <div class="input-group date form_date col-sm-7" data-date="" data-date-format=" yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
                                         <input class="form-control" size="16" type="text" value="" readonly>
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                                     </div>
-                                </div> -->
+                                </div>
                             </div>
                             <div class="base3">
+                                <div class="form-group">
+                                    <label for="text3" class="col-sm-3 control-label input-sm">合同编号:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="text3" placeholder="0000001">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text4" class="col-sm-3 control-label input-sm">金额:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control input-sm" id="text4" placeholder="请输入">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="contentsubbody">
                         <div class="bodyone">
+                            <div class="bodyone1">
+                                <div class="titlelabel labelfont15">
+                                    <span class="textleft70">印刷情况:</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text5" class="col-sm-3 control-label input-sm">名称:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="text5" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text6" class="col-sm-3 control-label input-sm">尺寸:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control input-sm" id="text6" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text7" class="col-sm-3 control-label input-sm">颜色:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="text7" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text8" class="col-sm-3 control-label input-sm">数量:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control input-sm" id="text8" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text9" class="col-sm-3 control-label input-sm">材料:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="text9" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text10" class="col-sm-3 control-label input-sm">跳距:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control input-sm" id="text10" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="titlelabel labelfont15">
+                                    <span class="textleft70">后期情况:</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text11" class="col-sm-3 control-label input-sm">喷码:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control input-sm" id="text11" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text12" class="col-sm-3 control-label input-sm">复膜/过油:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control input-sm" id="text12" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text13" class="col-sm-3 control-label input-sm">丝网:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control input-sm" id="text13" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text14" class="col-sm-3 control-label input-sm">烫金:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control input-sm" id="text14" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text15" class="col-sm-3 control-label input-sm">标间距</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control input-sm" id="text15" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text16" class="col-sm-3 control-label input-sm">R角:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control input-sm" id="text16" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text17" class="col-sm-3 control-label input-sm">成标要求:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control input-sm" id="text17" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text18" class="col-sm-3 control-label input-sm">筒芯尺寸:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control input-sm" id="text18" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text19" class="col-sm-3 control-label input-sm">打包要求:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control input-sm" id="text19" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text20" class="col-sm-3 control-label input-sm">出库数量:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control input-sm" id="text20" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text21" class="col-sm-3 control-label input-sm">菲林编号:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control input-sm" id="text21" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text22" class="col-sm-3 control-label input-sm">刀版编号:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control input-sm" id="text22" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bodyone2">
+                                <div class="titlelabel labelfont15">
+                                    <span class="textleft70">巡检:</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="bodytwo">
+                            <div class="titlelabel labelfont15">
+                                <span class="textleft70">特殊要求备注(小样粘贴处):</span>
+                            </div>
+                            <div class="parsePostion"></div>
                         </div>
                     </div>
                     <div class="bodybottom">
+                        <div class="bottomBtn">
+                            <button type="button" class="btn btn-primary">保存</button>
+                            <span> </span>
+                            <button type="button" class="btn btn-primary">打印</button>
+                        </div>
                     </div>
                 </div>
             </form>
