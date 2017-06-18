@@ -7,13 +7,11 @@
 <body>
 	<form action="{% url 'codetime:login_action' %}" method="post">
 	{% csrf_token %}
-		<label>账号
-			<input type="text" name="name" value="{{ person.name }}">
-		</label>
+		<label for="name">账号</label>
+		<input id="name" type="text" name="name" value="{{ person.name }}">
 		<br/>
-		<label>密码
-			<input type="text" name="password" value="{{ person.password }}">
-		</label>
+		<label for="password">密码</label>
+		<input id="password" type="text" name="password" value="{{ person.password }}">
 		<br/>
 
 		<input type="submit" value="提交">

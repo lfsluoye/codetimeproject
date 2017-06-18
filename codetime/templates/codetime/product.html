@@ -38,7 +38,7 @@
                     <li class="active">生产单</li>
                 </ol>
             </div>
-            <form class="form-horizontal">
+            <form class="form-horizontal" action="{% url 'codetime:postProduct' %}" method="post">
                 <div class="contentbody">
                     <div class="bodyhead">
                         <div class="titlelabel labelfont15">
@@ -49,7 +49,7 @@
                                 <div class="form-group">
                                     <label for="text1" class="col-sm-3 control-label input-sm">客户:</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control input-sm" id="text1" placeholder="请输入">
+                                        <input type="text" class="form-control input-sm" id="text1" name="kehu" value="product.kehu" placeholder="请输入">
                                     </div>
                                 </div>
                                 <div class="form-group">
