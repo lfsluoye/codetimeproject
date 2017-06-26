@@ -5,8 +5,9 @@
 	<title>登录</title>
 </head>
 <body>
-	<form action="{% url 'codetime:login_action' %}" method="post">
+	<form action="{% url 'codetime:loginForm' %}" method="post">
 	{% csrf_token %}
+	{{ form.non_field_errors }}
 		<label for="name">账号</label>
 		<input id="name" type="text" name="name" value="{{ person.name }}">
 		<br/>
@@ -17,5 +18,6 @@
 		<input type="submit" value="提交">
 		<br/>
 	</form>
+	
 </body>
 </html>

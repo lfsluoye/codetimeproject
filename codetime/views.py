@@ -1,16 +1,27 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .forms import NameForm
+from .forms import LoginForm
 from . import models
 # Create your views here.
 # def get_name(request):
 # 	if request.method == 'POST':
-# 		form = NameForm(request.POST)
+# 		form = LoginForm(request.POST)
 # 		if form.is_valid():
 # 			return HttpResponse(content='1',mimetype='text/html',status=200,content_type='text/plain')
 # 	else:
-# 		form = NameForm()
+# 		form = LoginForm()
 # 	return render(request, 'codetime/login.html',{'form': form})
+def loginForm(request):
+	if request.method == 'POST':
+		login_form = LoginForm(request.POST)
+		if login_form.is_valid():
+			login_form.save()
+			return HttpResponse("登录成功")
+		else:
+			print(login_form.errors.as_json())
+			return render(request, 'codetime/login.html')
+	return render(request, 'codetime/login.html')		
+
 def login(request):
 	return render(request, 'codetime/login.html')
 
@@ -28,3 +39,4 @@ def postProduct(request):
 
 def product(request):
 	return render(request, 'codetime/product.html')
+	
