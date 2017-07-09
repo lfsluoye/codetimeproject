@@ -1,5 +1,5 @@
 from django import forms
-from .models import Person
+from .models import Person, Product
 from django.core.exceptions import ValidationError
 
 class LoginForm(forms.ModelForm):
@@ -26,3 +26,9 @@ class LoginForm(forms.ModelForm):
 	class Meta:
 		model = Person
 		exclude = ('id',)
+class ProductForm(forms.ModelForm):
+	class Meta:
+		model = Product
+		exclude = ('id',)
+	
+		

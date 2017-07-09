@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
     url(r'^login/$', views.loginForm, name='loginForm'),
-    url(r'^product/$', views.product),
+    url(r'^product/$', views.productForm, name='productForm'),
 ]
