@@ -1,8 +1,8 @@
 .contentsubbody{
-	height: 900px;
+	height: 100%;
 }
 .mynav{
-	height: 1170px;
+	height: 779px;
 }
 .textleft70 {
     left: 20px;
@@ -15,32 +15,34 @@
     height: 40px;
 }
 
-
 .label1 {
     top: 40px;
 }
 
 .base1{
 	height: 100%;
-	width: 40%;
+	width: 34%;
 	position: relative;
 	left: 0;
 	top: 0;
 	display: inline-block;
 }
-.base2, .base3{
+.base2{
 	display: inline-block;
 	height: 100%;
 	width: 29%;
 }
-.base2{
+ .base3, .base4{
+ 	display: inline-block;
+	height: 100%;
+	width: 16%;
+ }
+
+.base2, .base3, .base4{
 	position: relative;
 	top: 0;
 }
-.base3{
-	position: relative;
-	top: 0;
-}
+
 .bodyone1{
 	width: 70%;
 	height: 100%;
@@ -58,6 +60,9 @@
 }
 .bottomBtn{
 	position: relative;
-	margin-left: 800px;
+	margin-left: 1080px;
 	width: 200px;
+}
+.MytableView{
+	
 }

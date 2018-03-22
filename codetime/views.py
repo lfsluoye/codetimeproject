@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import LoginForm, ProductForm
 from . import models
@@ -12,42 +12,48 @@ from . import models
 # 		form = LoginForm()
 # 	return render(request, 'codetime/login.html',{'form': form})
 def loginForm(request):
-	if request.method == 'POST':
-		login_form = LoginForm(request.POST)
-		if login_form.is_valid():
-			name = request.POST.get('name', 'NAME')
-			password = request.POST.get('password', 'PASSWORD')
+    if request.method == 'POST':
+        login_form = LoginForm(request.POST)
+        if login_form.is_valid():
+            name = request.POST.get('name', 'NAME')
+            password = request.POST.get('password', 'PASSWORD')
 
-			person = models.Person.objects.get(pk=1)
-			if name == person.name and password == person.password:
-				return render(request, 'codetime/product.html')
-			return render(request, 'codetime/login.html')
-		else:
-			print(login_form.errors.as_json())
-			return render(request, 'codetime/login.html', {"person": login_form.cleaned_data})
-	return render(request, 'codetime/login.html')		
+            person = models.Person.objects.get(pk=1)
+            if name == person.name and password == person.password:
+                return redirect('/codetime/product')
+                # return render(request, 'codetime/product.html')
+            return render(request, 'codetime/login.html')
+        else:
+            print(login_form.errors.as_json())
+            return render(request, 'codetime/login.html', {"person": login_form.cleaned_data})
+    return render(request, 'codetime/login.html')
 def productForm(request):
-	if request.method == 'POST':
-		product_form = ProductForm(request.POST)
-		if product_form.is_valid():
-			product_form.save()
-			return render(request, 'codetime/product.html')
-		else:
-			print(product_form.errors.as_json())
-			return render(request, 'codetime/product.html', {"product": product_form.cleaned_data})
-	return render(request, 'codetime/product.html')
+    if request.method == 'POST':
+        product_form = ProductForm(request.POST)
+        if product_form.is_valid():
+            product_form.save()
+            return render(request, 'codetime/product.html')
+        else:
+            print(product_form.errors.as_json())
+            return render(request, 'codetime/product.html', {"product": product_form.cleaned_data})
+    return render(request, 'codetime/product.html')
 def login(request):
-	return render(request, 'codetime/login.html')
+    return render(request, 'codetime/login.html')
 
 def login_action(request):
-	name = request.POST.get('name', 'NAME')
-	password = request.POST.get('password', 'PASSWORD')
+    name = request.POST.get('name', 'NAME')
+    password = request.POST.get('password', 'PASSWORD')
 
-	person = models.Person.objects.get(pk=1)
-	if name == person.name and password == person.password:
-		return render(request, 'codetime/product.html')
-	return render(request, 'codetime/login.html')
+    person = models.Person.objects.get(pk=1)
+    if name == person.name and password == person.password:
+        return render(request, 'codetime/product.html')
+    return render(request, 'codetime/login.html')
 
 def product(request):
-	return render(request, 'codetime/product.html')
-	
+    return render(request, 'codetime/product.html')
+
+def orderSearch(request):
+    list_page = range(10)
+    dataSource = models.Product.objects.all()
+    remain = range(10)
+    return render(request, 'codetime/orderSearch.html',{"list_page":list_page, "dataSource": dataSource, "remain": remain})

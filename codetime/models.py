@@ -33,6 +33,7 @@ class Product(models.Model):
 	text22 = models.CharField(max_length=32, null=True)
 	text23 = models.CharField(max_length=32, null=True)
 	text24 = models.CharField(max_length=32, null=True)
-
 	def __str__(self):
 		return self.name
+	
+		

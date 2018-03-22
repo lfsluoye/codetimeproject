@@ -25,10 +25,13 @@
                 <a class="navbar-brand" href="#">二维时代</a>
             </div>
             <div class="navlist">
+                <a href="#" class="list-group-item">合同</a>
                 <a href="#" class="list-group-item active">
                 生产单
                 </a>
-                <a href="#" class="list-group-item">合同</a>
+                <a href="../orderSearch/" class="list-group-item">
+                订单查询
+                </a>
             </div>
         </div>
         <div class="contentview">
@@ -50,13 +53,13 @@
                                 <div class="form-group">
                                     <label for="text1" class="col-sm-3 control-label input-sm">客户:</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control input-sm" id="text1"  value="{{ product.text1 }}" placeholder="请输入">
+                                        <input type="text" class="form-control input-sm" id="text1" name="text1"  value="{{ product.text1 }}" placeholder="请输入">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="text2" class="col-sm-3 control-label input-sm">地址:</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="text2" placeholder="请输入" value="{{product.text2}}">
+                                        <input type="text" class="form-control" id="text2" name="text2" placeholder="请输入" value="{{product.text2}}">
                                     </div>
                                 </div>
                             </div>
@@ -64,7 +67,7 @@
                                 <div class="form-group">
                                     <label for="dtp_input1" class="col-sm-4 control-label input-sm">下单日期:</label>
                                     <div class="input-group date form_date col-sm-7" data-date="" data-date-format=" yyyy-mm-dd" data-link-field="dtp_input1" data-link-format="yyyy-mm-dd">
-                                        <input class="form-control" id="text23"  size="16" type="text" value="{{product.text23}}" readonly >
+                                        <input class="form-control" id="text23" name="text23"  size="16" type="text" value="{{product.text23}}" >
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                                     </div>
@@ -72,7 +75,7 @@
                                 <div class="form-group">
                                     <label for="dtp_input2" class="col-sm-4 control-label input-sm">交货日期:</label>
                                     <div class="input-group date form_date col-sm-7" data-date="" data-date-format=" yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                                        <input class="form-control" size="16" id="text24" value="{{product.text24}}" type="text" readonly>
+                                        <input class="form-control" size="16" id="text24" value="{{product.text24}}" name="text24" type="text">
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                                     </div>
@@ -82,13 +85,13 @@
                                 <div class="form-group">
                                     <label for="text3" class="col-sm-3 control-label input-sm">合同编号:</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="text3" placeholder="0000001" value="{{product.text3}}">
+                                        <input type="text" class="form-control" id="text3" name="text3" placeholder="0000001" value="{{product.text3}}">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="text4" class="col-sm-3 control-label input-sm">金额:</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control input-sm" id="text4" placeholder="请输入" value="{{product.text4}}">
+                                        <input type="text" class="form-control input-sm" id="text4" name="text4" placeholder="请输入" value="{{product.text4}}">
                                     </div>
                                 </div>
                             </div>
@@ -103,37 +106,37 @@
                                 <div class="form-group">
                                     <label for="text5" class="col-sm-3 control-label input-sm">名称:</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="text5" placeholder="" value="{{product.text5}}">
+                                        <input type="text" class="form-control" id="text5" name="text5" placeholder="" value="{{product.text5}}">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="text6" class="col-sm-3 control-label input-sm">尺寸:</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control input-sm" id="text6" placeholder="" value="{{product.text6}}">
+                                        <input type="text" class="form-control input-sm" id="text6" name="text6" placeholder="" value="{{product.text6}}">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="text7" class="col-sm-3 control-label input-sm">颜色:</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="text7" placeholder="" value="{{product.text7}}">
+                                        <input type="text" class="form-control" id="text7" name="text7" placeholder="" value="{{product.text7}}">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="text8" class="col-sm-3 control-label input-sm">数量:</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control input-sm" id="text8" placeholder="" value="{{product.text8}}">
+                                        <input type="text" class="form-control input-sm" id="text8" name="text8" placeholder="" value="{{product.text8}}">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="text9" class="col-sm-3 control-label input-sm">材料:</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="text9" placeholder="" value="{{product.text9}}">
+                                        <input type="text" class="form-control" id="text9" name="text9" placeholder="" value="{{product.text9}}">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="text10" class="col-sm-3 control-label input-sm">跳距:</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control input-sm" id="text10" placeholder="" value="{{product.text10}}">
+                                        <input type="text" class="form-control input-sm" id="text10" name="text10" placeholder="" value="{{product.text10}}">
                                     </div>
                                 </div>
                                 <div class="titlelabel labelfont15">
@@ -142,73 +145,73 @@
                                 <div class="form-group">
                                     <label for="text11" class="col-sm-3 control-label input-sm">喷码:</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control input-sm" id="text11" placeholder="" value="{{product.text11}}">
+                                        <input type="text" class="form-control input-sm" id="text11" name="text11" placeholder="" value="{{product.text11}}">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="text12" class="col-sm-3 control-label input-sm">复膜/过油:</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control input-sm" id="text12" placeholder="" value="{{product.text12}}">
+                                        <input type="text" class="form-control input-sm" id="text12" name="text12" placeholder="" value="{{product.text12}}">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="text13" class="col-sm-3 control-label input-sm">丝网:</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control input-sm" id="text13" placeholder="" value="{{product.text13}}">
+                                        <input type="text" class="form-control input-sm" id="text13" name="text13" placeholder="" value="{{product.text13}}">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="text14" class="col-sm-3 control-label input-sm">烫金:</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control input-sm" id="text14" placeholder="" value="{{product.text14}}">
+                                        <input type="text" class="form-control input-sm" id="text14" name="text14" placeholder="" value="{{product.text14}}">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="text15" class="col-sm-3 control-label input-sm">标间距</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control input-sm" id="text15" placeholder="" value="{{product.text15}}">
+                                        <input type="text" class="form-control input-sm" id="text15" name="text15" placeholder="" value="{{product.text15}}">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="text16" class="col-sm-3 control-label input-sm">R角:</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control input-sm" id="text16" placeholder="" value="{{product.text16}}">
+                                        <input type="text" class="form-control input-sm" id="text16" name="text16" placeholder="" value="{{product.text16}}">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="text17" class="col-sm-3 control-label input-sm">成标要求:</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control input-sm" id="text17" placeholder="" value="{{product.text17}}">
+                                        <input type="text" class="form-control input-sm" id="text17" name="text17" placeholder="" value="{{product.text17}}">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="text18" class="col-sm-3 control-label input-sm">筒芯尺寸:</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control input-sm" id="text18" placeholder="" value="{{product.text18}}">
+                                        <input type="text" class="form-control input-sm" id="text18" name="text18" placeholder="" value="{{product.text18}}">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="text19" class="col-sm-3 control-label input-sm">打包要求:</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control input-sm" id="text19" placeholder="" value="{{product.text19}}">
+                                        <input type="text" class="form-control input-sm" id="text19" name="text19" placeholder="" value="{{product.text19}}">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="text20" class="col-sm-3 control-label input-sm">出库数量:</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control input-sm" id="text20" placeholder="" value="{{product.text20}}">
+                                        <input type="text" class="form-control input-sm" id="text20" name="text20" placeholder="" value="{{product.text20}}">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="text21" class="col-sm-3 control-label input-sm">菲林编号:</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control input-sm" id="text21" placeholder="" value="{{product.text21}}">
+                                        <input type="text" class="form-control input-sm" id="text21" name="text21" placeholder="" value="{{product.text21}}">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="text22" class="col-sm-3 control-label input-sm">刀版编号:</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control input-sm" id="text22" placeholder="" value="{{product.text22}}">
+                                        <input type="text" class="form-control input-sm" id="text22" name="text22" placeholder="" value="{{product.text22}}">
                                     </div>
                                 </div>
                             </div>
