@@ -2,3 +2,10 @@
 *.pyc
 *.cpython-36.pyc
 *.cpython-36
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
+__pycache__
