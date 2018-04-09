@@ -33,7 +33,19 @@ class Product(models.Model):
 	text22 = models.CharField(max_length=32, null=True)
 	text23 = models.CharField(max_length=32, null=True)
 	text24 = models.CharField(max_length=32, null=True)
+	text25 = models.CharField(max_length=32, null=True)
+	text26 = models.CharField(max_length=32, null=True)
+	text27 = models.CharField(max_length=32, null=True)
+	text28 = models.CharField(max_length=32, null=True)
+	text29 = models.CharField(max_length=32, null=True)
+	text30 = models.CharField(max_length=32, null=True)
+	# 生产中 false 已完成 true
+	status = models.BooleanField(default=False)
+	# 未发货false 已发货 true
+	shipments = models.BooleanField(default=False)
+	# 未结款false 未结款 true
+	knot = models.BooleanField(default=False)
 	def __str__(self):
-		return self.name
+		return self.text1
 	
 		

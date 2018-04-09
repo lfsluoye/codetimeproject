@@ -1,40 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>生产单</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'dist/css/bootstrap.min.css' %}">
-    <script type="text/javascript" src="{% static 'dist/js/jquery.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'dist/js/bootstrap.min.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'dist/css/bootstrap-datetimepicker.min.css' %}">
-    <script type="text/javascript" src="{% static 'dist/js/bootstrap-datetimepicker.js' %}" charset="UTF-8"></script>
-    <script type="text/javascript" src="{% static 'dist/js/locales/bootstrap-datetimepicker.zh-CN.js' %}" charset="UTF-8"></script>
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
-    <link rel="stylesheet" href="{% static 'css/product.css' %}">
-    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/product.js' %}"></script>
-</head>
+{% extends 'codetime/base.html' %}
 
-<body>
-    <div class="backview">
-        <div class="mynav">
-            <div class="headerbar">
-                <a class="navbar-brand" href="#">二维时代</a>
-            </div>
-            <div class="navlist">
-                <a href="#" class="list-group-item">合同</a>
-                <a href="#" class="list-group-item active">
-                生产单
-                </a>
-                <a href="../orderSearch/" class="list-group-item">
-                订单查询
-                </a>
-            </div>
-        </div>
-        <div class="contentview">
+{% block title %}生产单{% endblock %}
+
+{% block content %}
             <div class="contenthead">
                 <ol class="breadcrumb">
                     <li><a href="#">首页</a></li>
@@ -44,7 +13,8 @@
             <form class="form-horizontal" action="{% url 'codetime:productForm' %}" method="post">
             {% csrf_token %}
                 <div class="contentbody">
-                    <div class="bodyhead">
+                    <!--startprint-->
+                        <div class="bodyhead">
                         <div class="titlelabel labelfont15">
                             <span class="textleft70">基本情况:</span>
                         </div>
@@ -97,7 +67,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="contentsubbody">
+                        <div class="contentsubbody">
                         <div class="bodyone">
                             <div class="bodyone1">
                                 <div class="titlelabel labelfont15">
@@ -122,21 +92,57 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="text8" class="col-sm-3 control-label input-sm">数量:</label>
+                                    <label for="text8" class="col-sm-3 control-label input-sm">成品数量:</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control input-sm" id="text8" name="text8" placeholder="" value="{{product.text8}}">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="text9" class="col-sm-3 control-label input-sm">材料:</label>
+                                    <label for="text9" class="col-sm-3 control-label input-sm">印刷材料:</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control" id="text9" name="text9" placeholder="" value="{{product.text9}}">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="text10" class="col-sm-3 control-label input-sm">跳距:</label>
+                                    <label for="text10" class="col-sm-3 control-label input-sm">印刷宽幅:</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control input-sm" id="text10" name="text10" placeholder="" value="{{product.text10}}">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text25" class="col-sm-3 control-label input-sm">印刷版长:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control input-sm" id="text25" name="text25" placeholder="" value="{{product.text25}}">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text26" class="col-sm-3 control-label input-sm">印刷数量:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control input-sm" id="text26" name="text26" placeholder="" value="{{product.text26}}">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text27" class="col-sm-3 control-label input-sm">材料宽幅:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control input-sm" id="text27" name="text27" placeholder="" value="{{product.text27}}">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text28" class="col-sm-3 control-label input-sm">用料数量:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control input-sm" id="text28" name="text28" placeholder="" value="{{product.text28}}">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text29" class="col-sm-3 control-label input-sm">出血:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control input-sm" id="text27" name="text27" placeholder="" value="{{product.text27}}">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text30" class="col-sm-3 control-label input-sm">版面枚数:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control input-sm" id="text28" name="text28" placeholder="" value="{{product.text28}}">
                                     </div>
                                 </div>
                                 <div class="titlelabel labelfont15">
@@ -228,29 +234,33 @@
                             <div class="parsePostion"></div>
                         </div>
                     </div>
-                    <div class="bodybottom">
+                    <!--endprint-->
+                        <div class="bodybottom">
                         <div class="bottomBtn">
                             <button type="submit" class="btn btn-primary">保存</button>
-                            <span> </span>
-                            <button type="button" class="btn btn-primary">打印</button>
+{#                            <span> </span>#}
+{#                            <button type="button" onclick="doPrint()" class="btn btn-primary">打印</button>#}
                         </div>
                     </div>
                 </div>
             </form>
-        </div>
-    </div>
-    <script type="text/javascript">
-    $('.form_date').datetimepicker({
-        language: 'zh-CN',
-        weekStart: 1,
-        todayBtn: 1,
-        autoclose: 1,
-        todayHighlight: 1,
-        startView: 2,
-        minView: 2,
-        forceParse: 0
-    });
-    </script>
-</body>
 
-</html>
+
+{% endblock %}
+
+    {% block js %}
+    <script type="text/javascript">
+
+    function doPrint() {
+        bdhtml=window.document.body.innerHTML;
+        sprnstr="<!--startprint-->";
+        eprnstr="<!--endprint-->";
+        prnhtml=bdhtml.substr(bdhtml.indexOf(sprnstr)+17);
+        prnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr));
+        window.document.body.innerHTML=prnhtml;
+        window.print();
+        window.document.body.innerHTML = bdhtml;
+    }
+
+    </script>
+{% endblock %}

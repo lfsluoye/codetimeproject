@@ -1,12 +1,6 @@
 *{margin: 0;padding: 0}
 .backview{
-	width: 1564px;
-}
-
-.mynav{
-	width: 20%;
-	background-color: #3f3f3f;
-	float: left;
+	/*width: 1564px;*/
 }
 .headerbar{
 	width: 100%;
@@ -16,12 +10,33 @@
 	width: 100%;
 	overflow: hidden;
 }
-.contentview{
-	width: 80%;
-	float: right;
-	/*background-color: #346;*/
-	/*overflow: hidden;*/
+.backview .menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    background-color: #3f3f3f;
+}
 
+.backview .contentview{
+	position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 200px;
+    overflow: auto;
+	min-width: 1200px;
+}
+.backview .navlist .list-group-item{
+	border-radius: 0;
+	color: rgba(255, 255, 255, 0.447058823529412);
+	background-color: #3f3f3f;
+	border:0;
+}
+.backview .navlist .list-group-item.active {
+    color: #fff;
+    background-color: #337ab7;
 }
 .contenthead{
 	width: 100%;
@@ -35,11 +50,9 @@
 .bodyhead{
 	width: 100%;
 	height: 130px;
-	background-color: #f4f4f4;
 }
 .contentsubbody{
 	width: 100%;
-	background-color: #f4f4f4;
 }
 .bodyone{
 	height: 100%;
@@ -54,7 +67,6 @@
 .bodybottom{
 	height: 80px;
 	width: 100%;
-	background-color: #f4f4f4;
 }
 .labelfont13{
 	font-size: 13px;
@@ -69,3 +81,13 @@
 	font-size: 16px;
 }
 
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+
+.contentColor{
+	background-color: #f4f4f4;
+}

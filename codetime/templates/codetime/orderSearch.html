@@ -1,124 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>订单查询</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'dist/css/bootstrap.min.css' %}">
-    <script type="text/javascript" src="{% static 'dist/js/jquery.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'dist/js/bootstrap.min.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'dist/css/bootstrap-datetimepicker.min.css' %}">
-    <script type="text/javascript" src="{% static 'dist/js/bootstrap-datetimepicker.js' %}" charset="UTF-8"></script>
-    <script type="text/javascript" src="{% static 'dist/js/locales/bootstrap-datetimepicker.zh-CN.js' %}" charset="UTF-8"></script>
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
-    <link rel="stylesheet" href="{% static 'css/orderSearch.css' %}">
-    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/product.js' %}"></script>
-</head>
-
-<body>
-    <div class="backview">
-        <div class="mynav">
-            <div class="headerbar">
-                <a class="navbar-brand" href="#">二维时代</a>
+ {% extends 'codetime/base.html' %} {% block title %}订单查询{% endblock %} {% block content %}
+<div class="contenthead">
+    <ol class="breadcrumb">
+        <li><a href="#">首页</a></li>
+        <li class="active">订单查询</li>
+    </ol>
+</div>
+<form class="form-horizontal" action="{% url 'codetime:orderSearch' %}" method="get">
+    {% csrf_token %}
+    <div class="contentbody">
+        <div class="bodyhead">
+            <div class="titlelabel labelfont15">
+                <span class="textleft70">基本情况:</span>
             </div>
-            <div class="navlist">
-                <a href="#" class="list-group-item">合同</a>
-                <a href="../product/" class="list-group-item">
-                生产单
-                </a>
-                <a href="#" class="list-group-item active">
-                订单查询
-                </a>
-            </div>
-        </div>
-        <div class="contentview">
-            <div class="contenthead">
-                <ol class="breadcrumb">
-                    <li><a href="#">首页</a></li>
-                    <li class="active">订单查询</li>
-                </ol>
-            </div>
-            <form class="form-horizontal" action="{% url 'codetime:productForm' %}" method="post">
-                {% csrf_token %}
-                <div class="contentbody">
-                    <div class="bodyhead">
-                        <div class="titlelabel labelfont15">
-                            <span class="textleft70">基本情况:</span>
-                        </div>
-                        <div class="baseinfo">
-                            <div class="base1">
-                                <div class="form-group">
-                                    <label for="text1" class="col-sm-3 control-label input-sm">客户名称:</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control input-sm" id="text1" name="text1" value="{{ product.text1 }}" placeholder="请输入">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="text2" class="col-sm-3 control-label input-sm">搜索名称:</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="text2" name="text2" placeholder="请输入" value="{{product.text2}}">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="base2">
-                                <div class="form-group">
-                                    <label for="text2" class="col-sm-3 control-label input-sm">搜索名称:</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="text23" name="text23" placeholder="请输入" value="{{product.text23}}">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="dtp_input2" class="col-sm-3 control-label input-sm">搜索日期:</label>
-                                    <div class="input-group date form_date col-sm-7" data-date="" data-date-format=" yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                                        <input class="form-control" size="16" id="text24" value="{{product.text24}}" name="text24" type="text">
-                                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-                                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="base3">
-                                <div class="form-group">
-                                    <label for="text3" class="col-sm-3 control-label input-sm">状态:</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="text3" name="text3" placeholder="全部" value="{{product.text3}}">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="text4" class="col-sm-3 control-label input-sm">结款:</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control input-sm" id="text4" name="text4" placeholder="全部" value="{{product.text4}}">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="base4">
-                                <div class="form-group">
-                                    <label for="text3" class="col-sm-3 control-label input-sm">发货:</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="text3" name="text3" placeholder="全部" value="{{product.text3}}">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="text4" class="col-sm-3 control-label input-sm">结款:</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control input-sm" id="text4" name="text4" placeholder="全部" value="{{product.text4}}">
-                                    </div>
-                                </div>
-                            </div>
+            <div class="baseinfo">
+                <div class="base1">
+                    <div class="form-group">
+                        <label for="text1" class="col-sm-3 control-label input-sm">客户名称:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control input-sm" id="text1" name="text1" value="{{ condition.text1 }}" placeholder="请输入">
                         </div>
                     </div>
-                    <div class="contentsubbody">
-                        <div class="bodybottom">
-                            <div class="bottomBtn">
-                                <button type="submit" class="btn btn-primary">搜索</button>
-                                <span> </span>
-                                <button type="button" class="btn btn-danger">重置</button>
-                            </div>
+                    <div class="form-group">
+                        <label for="text2" class="col-sm-3 control-label input-sm">搜索名称:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="text2" name="text2" placeholder="请输入" value="{{condition.text2}}">
                         </div>
-                        <div class="MytableView">
-                            <table class="table table-bordered" contenteditable="true">
+                    </div>
+                </div>
+                <div class="base2">
+                    <div class="form-group">
+                        <label for="dtp_input2" class="col-sm-3 control-label input-sm">搜索日期:</label>
+                        <div class="input-group date form_date col-sm-7" data-date="" data-date-format=" yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                            <input class="form-control" size="16" id="text23" value="{{condition.text23}}" name="text23" type="text">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="text3" class="col-sm-3 control-label input-sm">发货:</label>
+                        <div class="col-sm-6">
+
+                            <select id="shipments" name="shipments">
+                                <option value="全部">全部</option>
+                                {% if condition.shipments == 0 %}
+                                    <option value="0" selected = "selected">未发货</option>
+                                {% else %}
+                                    <option value="0">未发货</option>
+                                {% endif %}
+                                {% if condition.shipments == 1 %}
+                                     <option value="1" selected = "selected">已发货</option>
+                                {% else %}
+                                    <option value="1">已发货</option>
+                                {% endif %}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="base3">
+                    <div class="form-group">
+                        <label for="text3" class="col-sm-3 control-label input-sm">状态:</label>
+                        <div class="col-sm-6">
+                            <select id="status" name = "status">
+                                <option value="全部">全部</option>
+                                {% if condition.status == 0 %}
+                                    <option value="0" selected = "selected">生产中</option>
+                                {% else %}
+                                    <option value="0">生产中</option>
+                                {% endif %}
+                                {% if condition.status == 1 %}
+                                     <option value="1" selected = "selected">已完成</option>
+                                {% else %}
+                                    <option value="1">已完成</option>
+                                {% endif %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="text4" class="col-sm-3 control-label input-sm">结款:</label>
+                        <div class="col-sm-6">
+                            <select id="knot" name = "knot">
+                                <option value="全部">全部</option>
+                                {% if condition.knot == 0 %}
+                                    <option selected = "selected" value="0">未结款</option>
+                                {% else %}
+                                    <option value="0">未结款</option>
+                                {% endif %}
+                                {% if condition.knot == 1 %}
+                                     <option selected = "selected" value="1">已结款</option>
+                                {% else %}
+                                    <option value="1">已结款</option>
+                                {% endif %}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contentsubbody">
+            <div class="bodybottom">
+                <div class="bottomBtn">
+                    <button id="order_search" type="submit" class="btn btn-primary">搜索</button>
+                    <span> </span>
+                    <button type="button" class="btn btn-danger">重置</button>
+                </div>
+            </div>
+            <div class="MytableView">
+                            <table class="table table-bordered" contenteditable="false">
                                 <thead>
                                     <tr>
                                         <th>日期</th>
@@ -134,58 +121,140 @@
                                         <th>操作</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    {% for i in list_page %} 
+                                <tbody id="contentData">
+                                    {% for item in dataSource %}
                                     <tr>
-                                        <td>1</td>
-                                        <td>TB - Monthly</td>
-                                        <td>01/04/2012</td>
-                                        <td>Default</td>
-                                        <td>1</td>
-                                        <td>TB - Monthly</td>
-                                        <td>01/04/2012</td>
-                                        <td>Default</td>
-                                        <td>1</td>
-                                        <td>TB - Monthly</td>
-                                        <td>01/04/2012</td>
+                                        <td>{{ item.text23 }}</td>
+                                        <td>{{ item.text2 }}</td>
+                                        <td>{{ item.text1 }}</td>
+                                        <td>{{ item.text5 }}</td>
+                                        <td>{{ item.text8 }}</td>
+                                        <td>单价</td>
+                                        <td>{{ item.text4 }}</td>
+                                        {% if item.status %}
+                                            <td onclick="changeStatus({{ item.id}},'{{ item.status }}');">已完成</td>
+                                        {% else %}
+                                            <td style="color: red" onclick="changeStatus({{ item.id}},'{{ item.status }}');">生产中</td>
+                                        {% endif %}
+                                        {% if item.shipments %}
+                                            <td  onclick="changeShipments({{ item.id}},'{{ item.shipments }}');">已发货</td>
+                                        {% else %}
+                                            <td style="color: red" onclick="changeShipments({{ item.id}},'{{ item.shipments }}')">未发货</td>
+                                        {% endif %}
+                                        {% if item.knot %}
+                                            <td onclick="changeKnot({{ item.id}},'{{ item.knot }}');">已结款</td>
+                                        {% else %}
+                                            <td style="color: red" onclick="changeKnot({{ item.id}},'{{ item.knot }}');">未结款</td>
+                                        {% endif %}
+                                        <td> <p class="left">编辑</p>
+                                            <p  onclick="writeDataToExcel({{ item.id }});">打印</p></td>
                                     </tr>
                                     {% endfor %}
                                 </tbody>
                             </table>
                         </div>
-                    </div>
-                    <div class="bodybottom">
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination">
-                                <li>
-                                    <a href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </form>
+        </div>
+        <div class="bodybottom">
+            <div class=" Page navigation pagination">
+                {{ page_str }}
+            </div>
         </div>
     </div>
-    <script type="text/javascript">
-    $('.form_date').datetimepicker({
-        language: 'zh-CN',
-        weekStart: 1,
-        todayBtn: 1,
-        autoclose: 1,
-        todayHighlight: 1,
-        startView: 2,
-        minView: 2,
-        forceParse: 0
-    });
-    </script>
-</body>
+</form>
+{% endblock %} {% block js %}
+<script type="text/javascript">
+function getXHR() {
+    var xhr = null;
+    if (XMLHttpRequest) {
+        xhr = new XMLHttpRequest();
+    } else {
+        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    return xhr;
 
-</html>
+}
+
+function changeShipments(item_id, item_shipments) {
+
+    $.ajax({
+        method: 'POST',
+        url: "/codetime/changeShipments/",
+        data: {
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            item_id: item_id,
+            item_shipments: item_shipments,
+        },
+        success: function(data) {
+            debugger;
+            console.log('chenggong');
+            window.location.reload();
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+            console.log(XMLHttpRequest.status);
+            console.log(XMLHttpRequest.readyState);
+            console.log(textStatus);
+        },
+    });
+}
+function changeStatus(item_id, item_status) {
+
+    $.ajax({
+        method: 'POST',
+        url: "/codetime/changeStatus/",
+        data: {
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            item_id: item_id,
+            item_status: item_status,
+        },
+        success: function(data) {
+            debugger;
+            console.log('chenggong');
+            window.location.reload();
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+            console.log(XMLHttpRequest.status);
+            console.log(XMLHttpRequest.readyState);
+            console.log(textStatus);
+        },
+    });
+}
+function changeKnot(item_id, item_knot) {
+
+    $.ajax({
+        method: 'POST',
+        url: "/codetime/changeKnot/",
+        data: {
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            item_id: item_id,
+            item_knot: item_knot,
+        },
+        success: function(data) {
+            debugger;
+            console.log('chenggong');
+            window.location.reload();
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+            console.log(XMLHttpRequest.status);
+            console.log(XMLHttpRequest.readyState);
+            console.log(textStatus);
+        },
+    });
+}
+function writeDataToExcel(item_id) {
+    $.ajax({
+        method: 'GET',
+        url: "/codetime/writeOrderToExcel/",
+        dataType: 'json',
+        data: {
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            item_id: item_id,
+        },
+        success: function(data) {
+            console.log('成功打印');
+
+        },
+        error: function() {}
+    });
+}
+</script>
+{% endblock %}

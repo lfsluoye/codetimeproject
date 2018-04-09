@@ -1,10 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/static/dist/css/bootstrap.min.css" type="text/css">
 
+    <link rel="stylesheet" href="/static/dist/css/bootstrap-datetimepicker.min.css">
+
+    <link rel="stylesheet" href="/static/codetime/css/main.css">
+    <link rel="stylesheet" href="/static/codetime/css/orderSearch.css">
+</head>
+
+<body>
+    <div class="backview">
+        <div class="menu left">
+            <div class="headerbar">
+                <a class="navbar-brand" style="color: #ffffff" href="#">二维时代</a>
+            </div>
+            <div class="navlist">
+{#                <div id="i1" href="../product/" class="list-group-item active" onclick="changeMenu('i1');">#}
+{#                    生产单#}
+{#                </div>#}
+{#                 #}
+                <a id="i1" class="list-group-item" href="../product/" >生产单</a>
+
+{#                <div id="i2" href="../orderSearch/"   class="list-group-item"  onclick="changeMenu('i2');">#}
+{#                    订单查询#}
+{#                </div>#}
+{#                 #}
+                <a id="i2" class="list-group-item" href="../orderSearch/">订单查询</a>
+
+
+            </div>
+        </div>
+        <div class="contentview left contentColor">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="/static/dist/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/dist/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="/static/dist/js/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="/static/codetime/js/main.js"></script>
+    <script type="text/javascript" src="/static/codetime/js/product.js"></script>
+    {% block js %}
+{% endblock %}
+<script type="text/javascript">
+    $(document).ready(function () {
+       $(".navlist a").each(function () {
+           $this = $(this);
+           if($this[0].href==String(window.location)){
+               $this.addClass("active")
+           }
+       })
+    });
+    $('.form_date').datetimepicker({
+        language: 'zh-CN',
+        weekStart: 1,
+        todayBtn: 1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 0
+    });
+
+    </script>
 </body>
+
 </html>
