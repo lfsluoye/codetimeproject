@@ -1,4 +1,4 @@
-gi>
+<uwsgi>
     <socket>127.0.0.1:8997</socket><!-- 内部端口，自定义 -->
         <chdir>/home/lfs/codetimeproject</chdir><!-- 项目路径 -->
             <module>codetimeproject.wsgi</module>
