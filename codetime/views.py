@@ -150,12 +150,12 @@ def writeOrderToExcel(request):
     timestr = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
 
     system, node, release, version, machine, processor = platform.uname()
-    if system == 'Darwin':
+    # if system == 'Darwin':
         # print()
-        wb.save(os.getcwd() + timestr + '.xlsx')
-    else:
-        path = timestr + '.xlsx'
-        wb.save(r'D:\\' + path)
-    print()
+        # wb.save(os.getcwd() + timestr + '.xlsx')
+    # else:
+    #     path = timestr + '.xlsx'
+        # wb.save(r'D:\\' + path)
+    print(system)
     # wb.save(r'D:\example.xlsx')
     return HttpResponse('OK')
