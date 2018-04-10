@@ -25,10 +25,11 @@ def loginForm(request):
         if login_form.is_valid():
             name = request.POST.get('name', 'NAME')
             password = request.POST.get('password', 'PASSWORD')
-            person = models.Person.objects.get(pk=1)
-            if name == person.name and password == person.password:
+            if name == "lifushuai" and password == "123456":
+            # person = models.Person.objects.get(pk=1)
+            # if name == person.name and password == person.password:
                 res = redirect('/codetime/product')
-                res.set_cookie('username111', person)
+                # res.set_cookie('username111', person)
                 return res
             return render(request, 'codetime/login.html')
         else:
