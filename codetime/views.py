@@ -25,10 +25,11 @@ def loginForm(request):
         if login_form.is_valid():
             name = request.POST.get('name', 'NAME')
             password = request.POST.get('password', 'PASSWORD')
-            person = models.Person.objects.get(pk=1)
-            if name == person.name and password == person.password:
+            if name == "lifushuai" and password == "123456":
+            # person = models.Person.objects.get(pk=1)
+            # if name == person.name and password == person.password:
                 res = redirect('/codetime/product')
-                res.set_cookie('username111', person)
+                # res.set_cookie('username111', person)
                 return res
             return render(request, 'codetime/login.html')
         else:
@@ -150,12 +151,12 @@ def writeOrderToExcel(request):
     timestr = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
 
     system, node, release, version, machine, processor = platform.uname()
-    if system == 'Darwin':
+    # if system == 'Darwin':
         # print()
-        wb.save(os.getcwd() + timestr + '.xlsx')
-    else:
-        path = timestr + '.xlsx'
-        wb.save(r'D:\\' + path)
-    print()
+        # wb.save(os.getcwd() + timestr + '.xlsx')
+    # else:
+    #     path = timestr + '.xlsx'
+        # wb.save(r'D:\\' + path)
+    print(system)
     # wb.save(r'D:\example.xlsx')
     return HttpResponse('OK')
