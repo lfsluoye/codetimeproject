@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, HttpResponse
-
+from django.http import StreamingHttpResponse
 from codetime.Extens import PageList
 from codetime.models import Product, Person
 from .forms import LoginForm, ProductForm
@@ -10,15 +10,21 @@ from openpyxl import Workbook
 import os
 import platform
 import datetime
+import io
+
+
 # Create your views here.
 def auth(func):
-    def inner(reqeust,*args,**kwargs):
+    def inner(reqeust, *args, **kwargs):
         v = reqeust.COOKIES.get('username111')
         if not v:
             return redirect('/codetime/login')
-        return func(reqeust, *args,**kwargs)
+        return func(reqeust, *args, **kwargs)
+
     return inner
-#用户登录函数
+
+
+# 用户登录函数
 def loginForm(request):
     if request.method == 'POST':
         login_form = LoginForm(request.POST)
@@ -38,6 +44,8 @@ def loginForm(request):
             print(login_form.errors.as_json())
             return render(request, 'codetime/login.html', {"person": login_form.cleaned_data})
     return render(request, 'codetime/login.html')
+
+
 @auth
 def productForm(request):
     if request.method == 'POST':
@@ -50,6 +58,7 @@ def productForm(request):
             return render(request, 'codetime/product.html', {"product": product_form.cleaned_data})
     return render(request, 'codetime/product.html')
 
+
 @auth
 def changeShipments(request):
     if request.method == 'POST':
@@ -60,6 +69,8 @@ def changeShipments(request):
         else:
             models.Product.objects.filter(id=item_id).update(shipments=True)
     return HttpResponse('OK')
+
+
 @auth
 def changeStatus(request):
     if request.method == 'POST':
@@ -70,6 +81,8 @@ def changeStatus(request):
         else:
             models.Product.objects.filter(id=item_id).update(status=True)
     return HttpResponse('OK')
+
+
 @auth
 def changeKnot(request):
     if request.method == 'POST':
@@ -80,9 +93,10 @@ def changeKnot(request):
         else:
             models.Product.objects.filter(id=item_id).update(knot=True)
     return HttpResponse('OK')
+
+
 @auth
 def orderSearch(request):
-    print("sssss")
     condition = {}
     text1 = request.GET.get('text1', "")
     text2 = request.GET.get('text2', "")
@@ -102,7 +116,8 @@ def orderSearch(request):
         condition["status"] = int(status)
     if knot != "全部":
         condition["knot"] = int(knot)
-    if len(condition) == 0:
+    dataSource = models.Product.objects.all()
+    if len(dataSource) == 0:
         return render(request, 'codetime/orderSearch.html')
     dataSource = models.Product.objects.filter(**condition).order_by('-text23')
     if len(dataSource) == 0:
@@ -114,9 +129,10 @@ def orderSearch(request):
     data = dataSource[page_obj.start:page_obj.end]
 
     page_str = page_obj.page_str("")
-    return render(request, 'codetime/orderSearch.html',{"dataSource": data,'page_str': page_str, "condition": condition})
+    return render(request, 'codetime/orderSearch.html',
+                  {"dataSource": data, 'page_str': page_str, "condition": condition})
 
-@auth
+
 def writeOrderToExcel(request):
     item_id = int(request.GET.get('item_id'))
     product_obj = models.Product.objects.filter(id=item_id).first()
@@ -154,15 +170,40 @@ def writeOrderToExcel(request):
     sheet['B31'] = product_obj.text22
     sheet['E3'] = product_obj.text23
     sheet['E4'] = product_obj.text24
-    timestr = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+    the_file_name = "tmp.xlsx"
+    exist_file = os.path.exists(the_file_name)
+    if exist_file:
+        os.remove(r"tmp.xlsx")
+    wb.save(the_file_name)
 
-    system, node, release, version, machine, processor = platform.uname()
+    def file_iterator(file_name, chunk_size=512):
+        with open(file_name) as f:
+            while True:
+                c = f.read(chunk_size)
+                if c:
+                    yield c
+                else:
+                    break
+
+    # file_io = file_iterator(the_file_name)
+    # response = StreamingHttpResponse(file_io)
+    # response['Content-Type'] = 'application/octet-stream'
+    # response['Content-Disposition'] = 'attachment;filename="{0}"'.format(the_file_name)
+
+    # return response
+    # 将以上代码复制到自己的方法中，通过form表单提交方式提交，即会返回到浏览器端下载excel
+    # timestr = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+
+    # system, node, release, version, machine, processor = platform.uname()
     # if system == 'Darwin':
-        # print()
-        # wb.save(os.getcwd() + timestr + '.xlsx')
+    # print()
+    # wb.save(os.getcwd() + timestr + '.xlsx')
     # else:
     #     path = timestr + '.xlsx'
-        # wb.save(r'D:\\' + path)
-    print(system)
+    # wb.save(r'D:\\' + path)
+    # print(system)
     # wb.save(r'D:\example.xlsx')
     return HttpResponse('OK')
+
+
+
