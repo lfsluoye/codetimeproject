@@ -2357,3 +2357,357 @@ spawned uWSGI worker 4 (pid: 1308, cores: 1)
 [pid: 1306|app: 0|req: 4/5] 123.123.4.68 () {42 vars in 814 bytes} [Tue Apr 10 07:24:26 2018] GET /admin/login/?next=/admin/ => generated 1853 bytes in 203 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
 [pid: 1306|app: 0|req: 5/6] 123.123.4.68 () {42 vars in 893 bytes} [Tue Apr 10 07:24:37 2018] GET /admin/login/?next=/admin/ => generated 0 bytes in 10 msecs (HTTP/1.1 302) 7 headers in 246 bytes (1 switches on core 0)
 [pid: 1308|app: 0|req: 2/7] 123.123.4.68 () {42 vars in 856 bytes} [Tue Apr 10 07:24:37 2018] GET /admin/ => generated 2939 bytes in 23 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1306|app: 0|req: 6/8] 123.123.4.68 () {42 vars in 814 bytes} [Tue Apr 10 07:31:13 2018] GET /admin/login/?next=/admin/ => generated 1853 bytes in 5 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1308|app: 0|req: 3/9] 123.123.4.68 () {42 vars in 814 bytes} [Tue Apr 10 07:31:15 2018] GET /admin/login/?next=/admin/ => generated 1853 bytes in 5 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1307|app: 0|req: 1/10] 123.123.4.68 () {42 vars in 814 bytes} [Tue Apr 10 07:31:24 2018] GET /admin/login/?next=/admin/ => generated 1853 bytes in 280 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1306|app: 0|req: 7/11] 123.123.4.68 () {42 vars in 814 bytes} [Tue Apr 10 07:31:25 2018] GET /admin/login/?next=/admin/ => generated 1853 bytes in 6 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1308|app: 0|req: 4/12] 123.123.4.68 () {42 vars in 765 bytes} [Tue Apr 10 07:31:25 2018] GET / => generated 74 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 1304|app: 0|req: 1/13] 123.123.4.68 () {42 vars in 799 bytes} [Tue Apr 10 07:31:26 2018] GET /codetime/product/ => generated 19617 bytes in 246 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1306|app: 0|req: 8/14] 123.123.4.68 () {42 vars in 799 bytes} [Tue Apr 10 07:31:27 2018] GET /codetime/product/ => generated 19617 bytes in 6 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1308|app: 0|req: 5/15] 123.123.4.68 () {44 vars in 901 bytes} [Tue Apr 10 07:31:47 2018] GET /admin/ => generated 2939 bytes in 11 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Apr 10 15:57:49 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 09 April 2018 07:51:58
+os: Linux-3.10.0-693.2.2.el7.x86_64 #1 SMP Tue Sep 12 22:26:13 UTC 2017
+nodename: izm5e2irzugtrmmer2gfz6z
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/lfs/codetimeproject
+detected binary path: /usr/local/python3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/lfs/codetimeproject
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7283
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8001).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Apr 10 15:58:33 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 09 April 2018 07:51:58
+os: Linux-3.10.0-693.2.2.el7.x86_64 #1 SMP Tue Sep 12 22:26:13 UTC 2017
+nodename: izm5e2irzugtrmmer2gfz6z
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/lfs/codetimeproject
+detected binary path: /usr/local/python3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/lfs/codetimeproject
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7283
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8001).
+bind(): Address already in use [core/socket.c line 769]
+[pid: 1306|app: 0|req: 9/16] 123.123.4.68 () {44 vars in 901 bytes} [Tue Apr 10 08:00:44 2018] GET /admin/ => generated 2939 bytes in 14 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1308|app: 0|req: 6/17] 123.123.4.68 () {44 vars in 901 bytes} [Tue Apr 10 08:00:45 2018] GET /admin/ => generated 2939 bytes in 10 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1306|app: 0|req: 10/18] 123.123.4.68 () {44 vars in 901 bytes} [Tue Apr 10 08:02:25 2018] GET /admin/ => generated 2939 bytes in 11 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1306|app: 0|req: 11/19] 123.123.4.68 () {42 vars in 799 bytes} [Tue Apr 10 08:05:58 2018] GET /codetime/product/ => generated 19617 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1308|app: 0|req: 7/20] 123.123.4.68 () {42 vars in 799 bytes} [Tue Apr 10 08:06:00 2018] GET /codetime/product/ => generated 19617 bytes in 6 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1306|app: 0|req: 12/21] 123.123.4.68 () {42 vars in 765 bytes} [Tue Apr 10 08:06:03 2018] GET / => generated 74 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 1304|app: 0|req: 2/22] 123.123.4.68 () {42 vars in 814 bytes} [Tue Apr 10 08:06:04 2018] GET /admin/login/?next=/admin/ => generated 1853 bytes in 25 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1306|app: 0|req: 13/23] 123.123.4.68 () {42 vars in 814 bytes} [Tue Apr 10 08:06:05 2018] GET /admin/login/?next=/admin/ => generated 1853 bytes in 5 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1306|app: 0|req: 14/24] 123.123.4.68 () {42 vars in 907 bytes} [Tue Apr 10 08:06:14 2018] GET /admin/login/?next=/admin/ => generated 0 bytes in 4 msecs (HTTP/1.1 302) 7 headers in 246 bytes (1 switches on core 0)
+[pid: 1307|app: 0|req: 2/25] 123.123.4.68 () {42 vars in 870 bytes} [Tue Apr 10 08:06:14 2018] GET /admin/ => generated 2939 bytes in 19 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1306|app: 0|req: 15/26] 123.123.4.68 () {44 vars in 901 bytes} [Tue Apr 10 08:06:32 2018] GET /admin/ => generated 2939 bytes in 10 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Apr 10 16:08:05 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 09 April 2018 07:51:58
+os: Linux-3.10.0-693.2.2.el7.x86_64 #1 SMP Tue Sep 12 22:26:13 UTC 2017
+nodename: izm5e2irzugtrmmer2gfz6z
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/lfs/codetimeproject
+detected binary path: /usr/local/python3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/lfs/codetimeproject
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7283
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8001).
+bind(): Address already in use [core/socket.c line 769]
+[pid: 1306|app: 0|req: 16/27] 123.123.4.68 () {44 vars in 901 bytes} [Tue Apr 10 08:08:11 2018] GET /admin/ => generated 2939 bytes in 10 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1306|app: 0|req: 17/28] 123.123.4.68 () {44 vars in 901 bytes} [Tue Apr 10 08:08:13 2018] GET /admin/ => generated 2939 bytes in 12 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1308|app: 0|req: 8/29] 123.123.4.68 () {44 vars in 901 bytes} [Tue Apr 10 08:08:15 2018] GET /admin/ => generated 2939 bytes in 12 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1306|app: 0|req: 18/30] 123.123.4.68 () {44 vars in 901 bytes} [Tue Apr 10 08:08:17 2018] GET /admin/ => generated 2939 bytes in 11 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1308|app: 0|req: 9/31] 123.123.4.68 () {44 vars in 901 bytes} [Tue Apr 10 08:08:19 2018] GET /admin/ => generated 2939 bytes in 11 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Apr 10 16:11:22 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 09 April 2018 07:51:58
+os: Linux-3.10.0-693.2.2.el7.x86_64 #1 SMP Tue Sep 12 22:26:13 UTC 2017
+nodename: izm5e2irzugtrmmer2gfz6z
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/lfs/codetimeproject
+detected binary path: /usr/local/python3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/lfs/codetimeproject
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7283
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.3 (default, Apr  9 2018, 15:14:41)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xc97810
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xc97810 pid: 1291 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 1291, cores: 1)
+spawned uWSGI worker 2 (pid: 1293, cores: 1)
+spawned uWSGI worker 3 (pid: 1294, cores: 1)
+spawned uWSGI worker 4 (pid: 1295, cores: 1)
+[pid: 1293|app: 0|req: 1/1] 123.123.4.68 () {42 vars in 814 bytes} [Tue Apr 10 08:11:27 2018] GET /admin/login/?next=/admin/ => generated 1853 bytes in 470 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1293|app: 0|req: 2/2] 123.123.4.68 () {44 vars in 844 bytes} [Tue Apr 10 08:11:31 2018] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 7 headers in 265 bytes (1 switches on core 0)
+[pid: 1295|app: 0|req: 1/3] 123.123.4.68 () {44 vars in 881 bytes} [Tue Apr 10 08:11:31 2018] GET /admin/login/?next=/admin/ => generated 1853 bytes in 274 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1293|app: 0|req: 3/4] 123.123.4.68 () {42 vars in 765 bytes} [Tue Apr 10 08:11:47 2018] GET / => generated 74 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 1294|app: 0|req: 1/5] 123.123.4.68 () {42 vars in 765 bytes} [Tue Apr 10 08:11:48 2018] GET / => generated 74 bytes in 239 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 1293|app: 0|req: 4/6] 123.123.4.68 () {42 vars in 814 bytes} [Tue Apr 10 08:11:51 2018] GET /admin/login/?next=/admin/ => generated 1853 bytes in 6 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1295|app: 0|req: 2/7] 123.123.4.68 () {42 vars in 814 bytes} [Tue Apr 10 08:11:51 2018] GET /admin/login/?next=/admin/ => generated 1853 bytes in 6 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1294|app: 0|req: 2/8] 123.123.4.68 () {42 vars in 893 bytes} [Tue Apr 10 08:11:59 2018] GET /admin/login/?next=/admin/ => generated 0 bytes in 21 msecs (HTTP/1.1 302) 7 headers in 246 bytes (1 switches on core 0)
+[pid: 1293|app: 0|req: 5/9] 123.123.4.68 () {42 vars in 856 bytes} [Tue Apr 10 08:11:59 2018] GET /admin/ => generated 2939 bytes in 19 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1295|app: 0|req: 3/10] 123.123.4.68 () {42 vars in 893 bytes} [Tue Apr 10 08:12:00 2018] GET /admin/login/?next=/admin/ => generated 0 bytes in 7 msecs (HTTP/1.1 302) 7 headers in 246 bytes (1 switches on core 0)
+[pid: 1295|app: 0|req: 4/11] 123.123.4.68 () {42 vars in 856 bytes} [Tue Apr 10 08:12:00 2018] GET /admin/ => generated 2939 bytes in 19 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1293|app: 0|req: 6/12] 123.123.4.68 () {42 vars in 814 bytes} [Tue Apr 10 08:17:27 2018] GET /admin/login/?next=/admin/ => generated 1853 bytes in 6 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1293|app: 0|req: 7/13] 123.123.4.68 () {42 vars in 799 bytes} [Tue Apr 10 08:17:39 2018] GET /codetime/product/ => generated 19617 bytes in 8 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1295|app: 0|req: 5/14] 123.123.4.68 () {42 vars in 799 bytes} [Tue Apr 10 08:17:39 2018] GET /codetime/product/ => generated 19617 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+sssss
+[pid: 1294|app: 0|req: 3/15] 123.123.4.68 () {44 vars in 866 bytes} [Tue Apr 10 08:17:42 2018] GET /codetime/orderSearch/ => generated 11011 bytes in 8 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1291|app: 0|req: 1/16] 123.123.4.68 () {44 vars in 862 bytes} [Tue Apr 10 08:17:44 2018] GET /codetime/product/ => generated 19617 bytes in 247 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+sssss
+[pid: 1293|app: 0|req: 8/17] 123.123.4.68 () {44 vars in 866 bytes} [Tue Apr 10 08:17:48 2018] GET /codetime/orderSearch/ => generated 11011 bytes in 6 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1293|app: 0|req: 9/18] 123.123.4.68 () {44 vars in 862 bytes} [Tue Apr 10 08:17:49 2018] GET /codetime/product/ => generated 19617 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Apr 10 18:53:35 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 09 April 2018 07:51:58
+os: Linux-3.10.0-693.2.2.el7.x86_64 #1 SMP Tue Sep 12 22:26:13 UTC 2017
+nodename: izm5e2irzugtrmmer2gfz6z
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/lfs/codetimeproject
+detected binary path: /usr/local/python3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/lfs/codetimeproject
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7283
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8001).
+bind(): Address already in use [core/socket.c line 769]
+[pid: 1293|app: 0|req: 10/19] 123.123.4.68 () {42 vars in 795 bytes} [Tue Apr 10 10:54:22 2018] GET /codetime/login/ => generated 558 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 277 bytes (1 switches on core 0)
+[pid: 1293|app: 0|req: 11/20] 60.10.69.60 () {38 vars in 644 bytes} [Tue Apr 10 11:03:24 2018] GET /codetime/login/ => generated 558 bytes in 1 msecs (HTTP/1.1 200) 5 headers in 277 bytes (1 switches on core 0)
+[pid: 1293|app: 0|req: 12/21] 60.10.69.60 () {48 vars in 937 bytes} [Tue Apr 10 11:03:33 2018] POST /codetime/login/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 5 headers in 183 bytes (1 switches on core 0)
+[pid: 1295|app: 0|req: 6/22] 60.10.69.60 () {42 vars in 815 bytes} [Tue Apr 10 11:03:33 2018] GET /codetime/product => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 123 bytes (1 switches on core 0)
+[pid: 1291|app: 0|req: 2/23] 60.10.69.60 () {42 vars in 817 bytes} [Tue Apr 10 11:03:33 2018] GET /codetime/product/ => generated 19617 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1295|app: 0|req: 7/24] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:03:35 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+sssss
+[pid: 1293|app: 0|req: 13/25] 60.10.69.60 () {42 vars in 827 bytes} [Tue Apr 10 11:03:56 2018] GET /codetime/orderSearch/ => generated 11011 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1291|app: 0|req: 3/26] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:03:56 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 1293|app: 0|req: 14/27] 60.10.69.60 () {42 vars in 823 bytes} [Tue Apr 10 11:04:05 2018] GET /codetime/product/ => generated 19617 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1294|app: 0|req: 4/28] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:04:05 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+{"text2": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text3": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text16": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text17": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text20": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text21": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text22": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text29": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text30": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}]}
+[pid: 1293|app: 0|req: 15/29] 60.10.69.60 () {48 vars in 966 bytes} [Tue Apr 10 11:12:11 2018] POST /codetime/product/ => generated 19761 bytes in 6 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1295|app: 0|req: 8/30] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:12:11 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+sssss
+[pid: 1295|app: 0|req: 9/31] 60.10.69.60 () {42 vars in 827 bytes} [Tue Apr 10 11:12:12 2018] GET /codetime/orderSearch/ => generated 11011 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1291|app: 0|req: 4/32] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:12:12 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+sssss
+[pid: 1294|app: 0|req: 5/33] 60.10.69.60 () {42 vars in 1202 bytes} [Tue Apr 10 11:12:14 2018] GET /codetime/orderSearch/?csrfmiddlewaretoken=92XqvsuuoZ3lrslBeM80Lr8lKMY26mMzwArr8nnTVEyQQlsBInVdikC8ldPpBQVe&text1=&text2=&text23=&shipments=%E5%85%A8%E9%83%A8&status=%E5%85%A8%E9%83%A8&knot=%E5%85%A8%E9%83%A8 => generated 11011 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1291|app: 0|req: 5/34] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:12:14 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+sssss
+[pid: 1293|app: 0|req: 16/35] 60.10.69.60 () {42 vars in 1460 bytes} [Tue Apr 10 11:12:18 2018] GET /codetime/orderSearch/?csrfmiddlewaretoken=rHKcbNlIH6gJVu0OXsInDTh8LtEIHqS6OfedOIe7eLLekn7Or3vAaMLVmUv5cU1L&text1=%E4%BA%8C%E7%BB%B4%E6%97%B6%E4%BB%A3&text2=&text23=&shipments=%E5%85%A8%E9%83%A8&status=%E5%85%A8%E9%83%A8&knot=%E5%85%A8%E9%83%A8 => generated 11011 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1291|app: 0|req: 6/36] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:12:18 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+sssss
+[pid: 1295|app: 0|req: 10/37] 60.10.69.60 () {42 vars in 1053 bytes} [Tue Apr 10 11:12:20 2018] GET /codetime/orderSearch/ => generated 11011 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1291|app: 0|req: 7/38] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:12:20 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 1294|app: 0|req: 6/39] 60.10.69.60 () {42 vars in 823 bytes} [Tue Apr 10 11:12:21 2018] GET /codetime/product/ => generated 19617 bytes in 4 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1291|app: 0|req: 8/40] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:12:21 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+sssss
+[pid: 1295|app: 0|req: 11/41] 60.10.69.60 () {42 vars in 827 bytes} [Tue Apr 10 11:12:22 2018] GET /codetime/orderSearch/ => generated 11011 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1293|app: 0|req: 17/42] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:12:22 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 1291|app: 0|req: 9/43] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:12:26 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+sssss
+[pid: 1293|app: 0|req: 18/44] 60.10.69.60 () {42 vars in 1224 bytes} [Tue Apr 10 11:12:30 2018] GET /codetime/orderSearch/?csrfmiddlewaretoken=pJktfULHCViSMqIaw1WONEJAp9y5Xy2TMhOuSPE69ANnbjPa0CJ1kxdn0Apss2by&text1=&text2=&text23=+2018-04-10&shipments=%E5%85%A8%E9%83%A8&status=%E5%85%A8%E9%83%A8&knot=%E5%85%A8%E9%83%A8 => generated 11011 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1291|app: 0|req: 10/45] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:12:30 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+sssss
+[pid: 1295|app: 0|req: 12/46] 60.10.69.60 () {42 vars in 1399 bytes} [Tue Apr 10 11:12:31 2018] GET /codetime/orderSearch/?csrfmiddlewaretoken=mqhniLSgeWdqLh005MOeFaDW4p17NFCMJYLoVGLFLBIVaa70znBrc37JFQSui9Lr&text1=&text2=&text23=&shipments=%E5%85%A8%E9%83%A8&status=%E5%85%A8%E9%83%A8&knot=%E5%85%A8%E9%83%A8 => generated 11011 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1291|app: 0|req: 11/47] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:12:31 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+sssss
+[pid: 1294|app: 0|req: 7/48] 60.10.69.60 () {42 vars in 1388 bytes} [Tue Apr 10 11:12:31 2018] GET /codetime/orderSearch/?csrfmiddlewaretoken=lhNHSAlVi8d4waVhcxPGNFunK1dUnWJlIPhIvvekPNIzV32hG8CTkyYals4hSqS0&text1=&text2=&text23=&shipments=%E5%85%A8%E9%83%A8&status=%E5%85%A8%E9%83%A8&knot=%E5%85%A8%E9%83%A8 => generated 11011 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1291|app: 0|req: 12/49] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:12:31 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 1294|app: 0|req: 8/50] 60.10.69.60 () {42 vars in 1009 bytes} [Tue Apr 10 11:12:36 2018] GET /codetime/product/ => generated 19617 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1293|app: 0|req: 19/51] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:12:36 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+sssss
+[pid: 1291|app: 0|req: 13/52] 60.10.69.60 () {42 vars in 827 bytes} [Tue Apr 10 11:12:37 2018] GET /codetime/orderSearch/ => generated 11011 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1295|app: 0|req: 13/53] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:12:37 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 1293|app: 0|req: 20/54] 60.10.69.60 () {42 vars in 823 bytes} [Tue Apr 10 11:14:08 2018] GET /codetime/product/ => generated 19617 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1295|app: 0|req: 14/55] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:14:09 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+{"text1": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text2": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text3": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text4": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text5": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text6": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text7": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text8": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text9": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text10": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text11": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text12": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text13": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text14": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text15": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text16": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text17": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text18": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text19": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text20": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text21": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text22": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text23": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text24": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text25": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text26": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text27": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text28": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text29": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text30": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}]}
+[pid: 1294|app: 0|req: 9/56] 60.10.69.60 () {48 vars in 966 bytes} [Tue Apr 10 11:14:10 2018] POST /codetime/product/ => generated 19617 bytes in 7 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1291|app: 0|req: 14/57] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:14:10 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+sssss
+[pid: 1293|app: 0|req: 21/58] 123.123.4.68 () {44 vars in 866 bytes} [Tue Apr 10 11:14:35 2018] GET /codetime/orderSearch/ => generated 11011 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+sssss
+[pid: 1295|app: 0|req: 15/59] 123.123.4.68 () {44 vars in 866 bytes} [Tue Apr 10 11:14:40 2018] GET /codetime/orderSearch/ => generated 11011 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1293|app: 0|req: 22/60] 123.123.4.68 () {44 vars in 862 bytes} [Tue Apr 10 11:14:41 2018] GET /codetime/product/ => generated 19617 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+sssss
+[pid: 1293|app: 0|req: 23/61] 123.123.4.68 () {44 vars in 866 bytes} [Tue Apr 10 11:14:52 2018] GET /codetime/orderSearch/ => generated 11011 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1293|app: 0|req: 24/62] 123.123.4.68 () {44 vars in 862 bytes} [Tue Apr 10 11:15:15 2018] GET /codetime/product/ => generated 19617 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+sssss
+[pid: 1295|app: 0|req: 16/63] 123.123.4.68 () {44 vars in 866 bytes} [Tue Apr 10 11:15:15 2018] GET /codetime/orderSearch/ => generated 11011 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+sssss
+[pid: 1293|app: 0|req: 25/64] 123.123.4.68 () {42 vars in 886 bytes} [Tue Apr 10 11:15:37 2018] GET /codetime/orderSearch/ => generated 11011 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+sssss
+[pid: 1295|app: 0|req: 17/65] 123.123.4.68 () {44 vars in 949 bytes} [Tue Apr 10 11:15:39 2018] GET /codetime/orderSearch/ => generated 11011 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+sssss
+[pid: 1293|app: 0|req: 26/66] 123.123.4.68 () {44 vars in 1334 bytes} [Tue Apr 10 11:15:45 2018] GET /codetime/orderSearch/?csrfmiddlewaretoken=ugXzdBAZxO3znea5c7ZUcLEase1jvyiGFCzl4pdaVCuk9G9ncypimOzL6Ol1J9Ao&text1=&text2=&text23=&shipments=%E5%85%A8%E9%83%A8&status=%E5%85%A8%E9%83%A8&knot=%E5%85%A8%E9%83%A8 => generated 11011 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1293|app: 0|req: 27/67] 123.123.4.68 () {44 vars in 1141 bytes} [Tue Apr 10 11:15:52 2018] GET /codetime/product/ => generated 19617 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+{"text29": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text30": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}]}
+[pid: 1293|app: 0|req: 28/68] 123.123.4.68 () {52 vars in 1127 bytes} [Tue Apr 10 11:16:49 2018] POST /codetime/product/ => generated 19903 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+{"text29": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text30": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}]}
+[pid: 1293|app: 0|req: 29/69] 123.123.4.68 () {52 vars in 1127 bytes} [Tue Apr 10 11:17:07 2018] POST /codetime/product/ => generated 19903 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+{"text29": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text30": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}]}
+[pid: 1295|app: 0|req: 18/70] 123.123.4.68 () {52 vars in 1141 bytes} [Tue Apr 10 11:17:13 2018] POST /codetime/product/ => generated 19903 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+{"text29": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text30": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}]}
+[pid: 1293|app: 0|req: 30/71] 123.123.4.68 () {52 vars in 1141 bytes} [Tue Apr 10 11:17:37 2018] POST /codetime/product/ => generated 19903 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+{"text29": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text30": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}]}
+[pid: 1293|app: 0|req: 31/72] 123.123.4.68 () {52 vars in 1127 bytes} [Tue Apr 10 11:20:07 2018] POST /codetime/product/ => generated 19903 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Apr 10 19:20:43 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 09 April 2018 07:51:58
+os: Linux-3.10.0-693.2.2.el7.x86_64 #1 SMP Tue Sep 12 22:26:13 UTC 2017
+nodename: izm5e2irzugtrmmer2gfz6z
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/lfs/codetimeproject
+detected binary path: /usr/local/python3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/lfs/codetimeproject
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7283
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8001).
+bind(): Address already in use [core/socket.c line 769]
+{"text29": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text30": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}]}
+[pid: 1293|app: 0|req: 32/73] 123.123.4.68 () {52 vars in 1127 bytes} [Tue Apr 10 11:20:50 2018] POST /codetime/product/ => generated 19903 bytes in 4 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+{"text29": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text30": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}]}
+[pid: 1295|app: 0|req: 19/74] 123.123.4.68 () {52 vars in 1127 bytes} [Tue Apr 10 11:20:52 2018] POST /codetime/product/ => generated 19903 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+sssss
+[pid: 1293|app: 0|req: 33/75] 60.10.69.60 () {42 vars in 827 bytes} [Tue Apr 10 11:21:16 2018] GET /codetime/orderSearch/ => generated 11011 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1295|app: 0|req: 20/76] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:21:17 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 1294|app: 0|req: 10/77] 60.10.69.60 () {42 vars in 823 bytes} [Tue Apr 10 11:21:17 2018] GET /codetime/product/ => generated 19617 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1291|app: 0|req: 15/78] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:21:17 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+sssss
+[pid: 1295|app: 0|req: 21/79] 60.10.69.60 () {42 vars in 827 bytes} [Tue Apr 10 11:21:18 2018] GET /codetime/orderSearch/ => generated 11011 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1291|app: 0|req: 16/80] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:21:18 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 1293|app: 0|req: 34/81] 60.10.69.60 () {42 vars in 823 bytes} [Tue Apr 10 11:21:19 2018] GET /codetime/product/ => generated 19617 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1294|app: 0|req: 11/82] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:21:19 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+sssss
+[pid: 1291|app: 0|req: 17/83] 60.10.69.60 () {42 vars in 827 bytes} [Tue Apr 10 11:21:20 2018] GET /codetime/orderSearch/ => generated 11011 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1295|app: 0|req: 22/84] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:21:20 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+sssss
+[pid: 1294|app: 0|req: 12/85] 60.10.69.60 () {42 vars in 1202 bytes} [Tue Apr 10 11:21:21 2018] GET /codetime/orderSearch/?csrfmiddlewaretoken=l1K6eXXoF6Y67oC14TK8pda36PbTYmvxIze7RSQNcLtBwhJ1yuxlW6EQHg2gtQEc&text1=&text2=&text23=&shipments=%E5%85%A8%E9%83%A8&status=%E5%85%A8%E9%83%A8&knot=%E5%85%A8%E9%83%A8 => generated 11011 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1295|app: 0|req: 23/86] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:21:21 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+sssss
+[pid: 1293|app: 0|req: 35/87] 60.10.69.60 () {42 vars in 1388 bytes} [Tue Apr 10 11:21:22 2018] GET /codetime/orderSearch/?csrfmiddlewaretoken=1zz3i1bF6uNP6sDGofIimo8dzE0asfOAo734VW44D9ikvlKGSQvvThC0a5RxXJXf&text1=&text2=&text23=&shipments=%E5%85%A8%E9%83%A8&status=%E5%85%A8%E9%83%A8&knot=%E5%85%A8%E9%83%A8 => generated 11011 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1291|app: 0|req: 18/88] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:21:22 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 1295|app: 0|req: 24/89] 60.10.69.60 () {42 vars in 1009 bytes} [Tue Apr 10 11:21:24 2018] GET /codetime/product/ => generated 19617 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1294|app: 0|req: 13/90] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:21:24 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+{"text29": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text30": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}]}
+[pid: 1293|app: 0|req: 36/91] 123.123.4.68 () {52 vars in 1127 bytes} [Tue Apr 10 11:21:28 2018] POST /codetime/product/ => generated 19903 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+{"text29": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text30": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}]}
+[pid: 1291|app: 0|req: 19/92] 123.123.4.68 () {52 vars in 1127 bytes} [Tue Apr 10 11:21:37 2018] POST /codetime/product/ => generated 19903 bytes in 7 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+{"text29": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text30": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}]}
+[pid: 1295|app: 0|req: 25/93] 123.123.4.68 () {52 vars in 1127 bytes} [Tue Apr 10 11:21:39 2018] POST /codetime/product/ => generated 19903 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+{"text29": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text30": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}]}
+[pid: 1293|app: 0|req: 37/94] 123.123.4.68 () {52 vars in 1141 bytes} [Tue Apr 10 11:21:50 2018] POST /codetime/product/ => generated 19903 bytes in 4 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+{"text2": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text3": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text13": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text14": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text15": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text16": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text17": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text18": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text19": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text20": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text21": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text22": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text29": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text30": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}]}
+[pid: 1295|app: 0|req: 26/95] 60.10.69.60 () {48 vars in 966 bytes} [Tue Apr 10 11:21:55 2018] POST /codetime/product/ => generated 19745 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1294|app: 0|req: 14/96] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:21:55 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+{"text2": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text3": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text13": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text14": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text15": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text16": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text17": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text18": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text19": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text20": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text21": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text22": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text29": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text30": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}]}
+[pid: 1293|app: 0|req: 38/97] 60.10.69.60 () {48 vars in 966 bytes} [Tue Apr 10 11:21:57 2018] POST /codetime/product/ => generated 19745 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1291|app: 0|req: 20/98] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:21:57 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+sssss
+[pid: 1294|app: 0|req: 15/99] 60.10.69.60 () {42 vars in 827 bytes} [Tue Apr 10 11:21:58 2018] GET /codetime/orderSearch/ => generated 11011 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1291|app: 0|req: 21/100] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:21:59 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+sssss
+[pid: 1295|app: 0|req: 27/101] 60.10.69.60 () {42 vars in 1202 bytes} [Tue Apr 10 11:22:00 2018] GET /codetime/orderSearch/?csrfmiddlewaretoken=oxUr6TcwpGbnec2tY854qEGr04vqfEzaL5osJO5VWlGSD59tsJShXxaeBvmNK8IP&text1=&text2=&text23=&shipments=%E5%85%A8%E9%83%A8&status=%E5%85%A8%E9%83%A8&knot=%E5%85%A8%E9%83%A8 => generated 11011 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1291|app: 0|req: 22/102] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:22:00 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+sssss
+[pid: 1294|app: 0|req: 16/103] 60.10.69.60 () {42 vars in 1388 bytes} [Tue Apr 10 11:22:01 2018] GET /codetime/orderSearch/?csrfmiddlewaretoken=yejqO1eovrtdrANUYt0sjg0bsqvXlfGCVMNrrW7N26YIQtUUs4NFQ9uY3RmkQJPh&text1=&text2=&text23=&shipments=%E5%85%A8%E9%83%A8&status=%E5%85%A8%E9%83%A8&knot=%E5%85%A8%E9%83%A8 => generated 11011 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1295|app: 0|req: 28/104] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:22:01 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+sssss
+[pid: 1291|app: 0|req: 23/105] 60.10.69.60 () {42 vars in 1388 bytes} [Tue Apr 10 11:22:01 2018] GET /codetime/orderSearch/?csrfmiddlewaretoken=dj2ij1BE2GkS8MDRdPztf7bacFqCXV4TARwjWWu3zlPnxFKRHqmGM0FXN6hZspdy&text1=&text2=&text23=&shipments=%E5%85%A8%E9%83%A8&status=%E5%85%A8%E9%83%A8&knot=%E5%85%A8%E9%83%A8 => generated 11011 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1293|app: 0|req: 39/106] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:22:02 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+sssss
+[pid: 1295|app: 0|req: 29/107] 60.10.69.60 () {42 vars in 1460 bytes} [Tue Apr 10 11:22:03 2018] GET /codetime/orderSearch/?csrfmiddlewaretoken=aaIieyboP1lF7H28Kou8F6PMBxWJKCHixIcjRt4NmGQawA98eZhlcZjzcYN6f6QX&text1=%E4%BA%8C%E7%BB%B4%E6%97%B6%E4%BB%A3&text2=&text23=&shipments=%E5%85%A8%E9%83%A8&status=%E5%85%A8%E9%83%A8&knot=%E5%85%A8%E9%83%A8 => generated 11011 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1293|app: 0|req: 40/108] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:22:04 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 1293|app: 0|req: 41/109] 60.10.69.60 () {42 vars in 1045 bytes} [Tue Apr 10 11:22:05 2018] GET /codetime/product/ => generated 19617 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1291|app: 0|req: 24/110] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 11:22:05 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+{"text1": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text2": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text3": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text4": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text5": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text6": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text7": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text8": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text9": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text10": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text11": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text12": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text13": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text14": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text15": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text16": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text17": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text18": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text19": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text20": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text21": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text22": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text23": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text24": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text25": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text26": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text27": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text28": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text29": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text30": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}]}
+[pid: 1293|app: 0|req: 42/111] 60.10.69.60 () {48 vars in 966 bytes} [Tue Apr 10 12:34:20 2018] POST /codetime/product/ => generated 19617 bytes in 8 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1295|app: 0|req: 30/112] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 12:34:21 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+{"text2": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text3": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text4": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text11": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text12": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text13": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text14": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text15": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text16": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text17": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text18": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text19": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text20": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text21": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text22": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text23": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text24": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text27": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text28": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text29": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text30": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}]}
+[pid: 1293|app: 0|req: 43/113] 60.10.69.60 () {48 vars in 966 bytes} [Tue Apr 10 12:34:35 2018] POST /codetime/product/ => generated 19686 bytes in 6 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1295|app: 0|req: 31/114] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 12:34:35 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+{"text2": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text3": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text4": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text11": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text12": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text13": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text14": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text15": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text16": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text17": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text18": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text19": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text20": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text21": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text22": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text23": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text24": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text27": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text28": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text29": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text30": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}]}
+[pid: 1295|app: 0|req: 32/115] 60.10.69.60 () {48 vars in 966 bytes} [Tue Apr 10 12:34:39 2018] POST /codetime/product/ => generated 19686 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1294|app: 0|req: 17/116] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 12:34:39 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+{"text2": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text3": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text4": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text11": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text12": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text13": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text14": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text15": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text16": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text17": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text18": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text19": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text20": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text21": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text22": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text23": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text24": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text27": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text28": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text29": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text30": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}]}
+[pid: 1293|app: 0|req: 44/117] 60.10.69.60 () {48 vars in 966 bytes} [Tue Apr 10 12:34:39 2018] POST /codetime/product/ => generated 19686 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1291|app: 0|req: 25/118] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 12:34:40 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+{"text2": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text3": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text4": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text11": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text12": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text13": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text14": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text15": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text16": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text17": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text18": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text19": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text20": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text21": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text22": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text23": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text24": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text27": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text28": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text29": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text30": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}]}
+[pid: 1294|app: 0|req: 18/119] 60.10.69.60 () {48 vars in 966 bytes} [Tue Apr 10 12:34:40 2018] POST /codetime/product/ => generated 19686 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1291|app: 0|req: 26/120] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 12:34:40 2018] GET /favicon.ico => generated 85 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+sssss
+[pid: 1295|app: 0|req: 33/121] 60.10.69.60 () {42 vars in 827 bytes} [Tue Apr 10 12:34:41 2018] GET /codetime/orderSearch/ => generated 11011 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1291|app: 0|req: 27/122] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 12:34:41 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+sssss
+[pid: 1293|app: 0|req: 45/123] 60.10.69.60 () {42 vars in 1202 bytes} [Tue Apr 10 12:34:42 2018] GET /codetime/orderSearch/?csrfmiddlewaretoken=NgsPdblSXxwgWWIaGM1Pux8oXnj5BcVaaOWQQ6ehuc1LlPPaanO21qCbyOas6G4P&text1=&text2=&text23=&shipments=%E5%85%A8%E9%83%A8&status=%E5%85%A8%E9%83%A8&knot=%E5%85%A8%E9%83%A8 => generated 11011 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1291|app: 0|req: 28/124] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 12:34:42 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 1295|app: 0|req: 34/125] 60.10.69.60 () {42 vars in 1009 bytes} [Tue Apr 10 12:34:44 2018] GET /codetime/product/ => generated 19617 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1293|app: 0|req: 46/126] 60.10.69.60 () {38 vars in 575 bytes} [Tue Apr 10 12:34:44 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 1293|app: 0|req: 47/127] 221.216.189.1 () {44 vars in 863 bytes} [Tue Apr 10 12:49:45 2018] GET /codetime/product/ => generated 19617 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+{"text2": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text3": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text4": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text5": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text6": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text7": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text8": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text9": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text10": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text11": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text12": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text13": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text14": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text15": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text16": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text17": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text18": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text19": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text20": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text21": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text22": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text23": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text24": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text25": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text26": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text27": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text28": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text29": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text30": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}]}
+[pid: 1295|app: 0|req: 35/128] 221.216.189.1 () {50 vars in 1016 bytes} [Tue Apr 10 12:49:52 2018] POST /codetime/product/ => generated 19619 bytes in 6 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+{"text29": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text30": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}]}
+[pid: 1293|app: 0|req: 48/129] 221.216.189.1 () {52 vars in 1128 bytes} [Tue Apr 10 14:35:21 2018] POST /codetime/product/ => generated 19903 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+{"text29": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text30": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}]}
+[pid: 1293|app: 0|req: 49/130] 221.216.189.1 () {52 vars in 1128 bytes} [Tue Apr 10 14:35:25 2018] POST /codetime/product/ => generated 19903 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+{"text29": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text30": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}]}
+[pid: 1295|app: 0|req: 36/131] 221.216.189.1 () {52 vars in 1128 bytes} [Tue Apr 10 14:35:28 2018] POST /codetime/product/ => generated 19903 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
