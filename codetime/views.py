@@ -31,7 +31,7 @@ def loginForm(request):
             # person = models.Person.objects.get(pk=1)
             if name == person.name and password == person.password:
                 res = redirect('/codetime/product')
-                # res.set_cookie('username111', person)
+                res.set_cookie('username111', person)
                 return res
             return render(request, 'codetime/login.html')
         else:
