@@ -246,7 +246,6 @@ function writeDataToExcel(item_id) {
         url: "/codetime/writeOrderToExcel/",
         dataType: 'json',
         data: {
-            csrfmiddlewaretoken: '{{ csrf_token }}',
             item_id: item_id,
         },
         success: function(data) {
