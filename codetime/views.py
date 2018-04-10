@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, HttpResponse
 
 from codetime.Extens import PageList
-from codetime.models import Product
+from codetime.models import Product, Person
 from .forms import LoginForm, ProductForm
 from . import models
 
@@ -25,9 +25,11 @@ def loginForm(request):
         if login_form.is_valid():
             name = request.POST.get('name', 'NAME')
             password = request.POST.get('password', 'PASSWORD')
-            if name == "lifushuai" and password == "123456":
+            person = Person()
+            person.name = "lifushuai"
+            person.password = "123456"
             # person = models.Person.objects.get(pk=1)
-            # if name == person.name and password == person.password:
+            if name == person.name and password == person.password:
                 res = redirect('/codetime/product')
                 # res.set_cookie('username111', person)
                 return res
