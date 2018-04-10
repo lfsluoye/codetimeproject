@@ -100,7 +100,11 @@ def orderSearch(request):
         condition["status"] = int(status)
     if knot != "全部":
         condition["knot"] = int(knot)
+    if len(condition) == 0:
+        return render(request, 'codetime/orderSearch.html')
     dataSource = models.Product.objects.filter(**condition).order_by('-text23')
+    if len(dataSource) == 0:
+        return render(request, 'codetime/orderSearch.html')
     current_page = request.GET.get('p', 1)
     current_page = int(current_page)
     val = 10
