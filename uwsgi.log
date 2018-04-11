@@ -2711,3 +2711,26 @@ sssss
 [pid: 1293|app: 0|req: 49/130] 221.216.189.1 () {52 vars in 1128 bytes} [Tue Apr 10 14:35:25 2018] POST /codetime/product/ => generated 19903 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
 {"text29": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text30": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}]}
 [pid: 1295|app: 0|req: 36/131] 221.216.189.1 () {52 vars in 1128 bytes} [Tue Apr 10 14:35:28 2018] POST /codetime/product/ => generated 19903 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Apr 10 22:38:15 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 09 April 2018 07:51:58
+os: Linux-3.10.0-693.2.2.el7.x86_64 #1 SMP Tue Sep 12 22:26:13 UTC 2017
+nodename: izm5e2irzugtrmmer2gfz6z
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/lfs/codetimeproject
+detected binary path: /usr/local/python3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/lfs/codetimeproject
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7283
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8001).
+bind(): Address already in use [core/socket.c line 769]
+{"text29": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}], "text30": [{"message": "\u8fd9\u4e2a\u5b57\u6bb5\u662f\u5fc5\u586b\u9879\u3002", "code": "required"}]}
+[pid: 1293|app: 0|req: 50/132] 123.123.4.68 () {52 vars in 1127 bytes} [Wed Apr 11 01:08:24 2018] POST /codetime/product/ => generated 19903 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
