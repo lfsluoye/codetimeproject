@@ -147,7 +147,8 @@
                                             <td style="color: red" onclick="changeKnot({{ item.id}},'{{ item.knot }}');">未结款</td>
                                         {% endif %}
                                         <td> <p class="left">编辑</p>
-                                            <p  onclick="writeDataToExcel({{ item.id }});">打印</p></td>
+                                            <p class="left"  onclick="writeDataToExcel({{ item.id }});">打印</p></td>
+
                                     </tr>
                                     {% endfor %}
                                 </tbody>
@@ -223,6 +224,7 @@ function changeKnot(item_id, item_knot) {
     $.ajax({
         method: 'POST',
         url: "/codetime/changeKnot/",
+
         data: {
             csrfmiddlewaretoken: '{{ csrf_token }}',
             item_id: item_id,
@@ -241,19 +243,53 @@ function changeKnot(item_id, item_knot) {
     });
 }
 function writeDataToExcel(item_id) {
-    $.ajax({
-        method: 'GET',
-        url: "/codetime/writeOrderToExcel/",
-        dataType: 'json',
-        data: {
-            item_id: item_id,
-        },
-        success: function(data) {
-            console.log('成功打印');
-
-        },
-        error: function() {}
-    });
+{#    var tt = new Date().getTime();#}
+    debugger;
+    var url = '/codetime/writeOrderToExcel/';
+    /**
+    * 使用form表单来发送请求
+    * 1.method属性用来设置请求的类型——post还是get
+    * 2.action属性用来设置请求路径。
+    *
+    */
+    var form=$("<form>");//定义一个form表单
+    form.attr("style","display:none");
+    form.attr("target","");
+    form.attr("method","get"); //请求类型
+    form.attr("action",url); //请求地址
+    $("body").append(form);//将表单放置在web中
+    　　/**
+    * input标签主要用来传递请求所需的参数：
+    *
+    * 1.name属性是传递请求所需的参数名.
+    * 2.value属性是传递请求所需的参数值.
+    *
+    * 3.当为get类型时，请求所需的参数用input标签来传递，直接写在URL后面是无效的。
+    * 4.当为post类型时，queryString参数直接写在URL后面，formData参数则用input标签传递
+    * 有多少数据则使用多少input标签
+    *
+    　　　*/
+    var input1=$("<input>");
+    input1.attr("type","hidden");
+    input1.attr("name","item_id");
+    input1.attr("value",item_id);
+    form.append(input1);
+    form.submit();
+{#    $.ajax({#}
+{#        method: 'GET',#}
+{#        url: "/codetime/writeOrderToExcel/",#}
+{#        dataType:'text',#}
+{#        data: {#}
+{#            item_id: item_id,#}
+{#        },#}
+{#        success: function(data) {#}
+{#            debugger;#}
+{#            console.log('成功打印');#}
+{#        },#}
+{#        error: function() {#}
+{#            console.log('失败');#}
+{#        }#}
+{#    });#}
 }
 </script>
 {% endblock %}

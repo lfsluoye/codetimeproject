@@ -1,16 +1,14 @@
 from django.shortcuts import render, redirect, HttpResponse
 from django.http import StreamingHttpResponse
 from codetime.Extens import PageList
-from codetime.models import Product, Person
+from codetime.models import Person
 from .forms import LoginForm, ProductForm
 from . import models
 
 from openpyxl import load_workbook
-from openpyxl import Workbook
+
 import os
-import platform
-import datetime
-import io
+
 
 
 # Create your views here.
@@ -177,7 +175,7 @@ def writeOrderToExcel(request):
     wb.save(the_file_name)
 
     def file_iterator(file_name, chunk_size=512):
-        with open(file_name) as f:
+        with open(file_name, 'rb') as f:
             while True:
                 c = f.read(chunk_size)
                 if c:
@@ -185,13 +183,11 @@ def writeOrderToExcel(request):
                 else:
                     break
 
-    # file_io = file_iterator(the_file_name)
-    # response = StreamingHttpResponse(file_io)
-    # response['Content-Type'] = 'application/octet-stream'
-    # response['Content-Disposition'] = 'attachment;filename="{0}"'.format(the_file_name)
+    response = StreamingHttpResponse(file_iterator(the_file_name))
+    response['Content-Type'] = 'application/vnd.ms-excel'
+    response['Content-Disposition'] = 'attachment;filename="{0}"'.format(the_file_name)
+    return response
 
-    # return response
-    # 将以上代码复制到自己的方法中，通过form表单提交方式提交，即会返回到浏览器端下载excel
     # timestr = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
 
     # system, node, release, version, machine, processor = platform.uname()
@@ -203,7 +199,7 @@ def writeOrderToExcel(request):
     # wb.save(r'D:\\' + path)
     # print(system)
     # wb.save(r'D:\example.xlsx')
-    return HttpResponse('OK')
+    # return HttpResponse('OK')
 
 
 
