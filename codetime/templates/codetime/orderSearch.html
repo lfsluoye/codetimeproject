@@ -146,7 +146,7 @@
                                         {% else %}
                                             <td style="color: red" onclick="changeKnot({{ item.id}},'{{ item.knot }}');">未结款</td>
                                         {% endif %}
-                                        <td> <p class="left">编辑</p>
+                                        <td> <p id="order_edit" class="left">编辑</p>
                                             <p class="left"  onclick="writeDataToExcel({{ item.id }});">打印</p></td>
 
                                     </tr>
