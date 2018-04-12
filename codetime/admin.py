@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from codetime.models import Person, Product
+
+admin.site.register(Person)
+admin.site.register(Product)
