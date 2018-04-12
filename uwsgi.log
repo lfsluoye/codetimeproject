@@ -3090,3 +3090,160 @@ Traceback (most recent call last):
     'Specifying a namespace in include() without providing an app_name '
 django.core.exceptions.ImproperlyConfigured: Specifying a namespace in include() without providing an app_name is not supported. Set the app_name attribute in the included module, or pass a 2-tuple containing the list of patterns and app_name instead.
 [pid: 1293|app: 0|req: 2/7] 114.240.85.16 () {42 vars in 773 bytes} [Thu Apr 12 04:05:03 2018] GET /codetime/login/ => generated 106745 bytes in 56 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Thu Apr 12 12:08:31 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 09 April 2018 07:51:58
+os: Linux-3.10.0-693.2.2.el7.x86_64 #1 SMP Tue Sep 12 22:26:13 UTC 2017
+nodename: izm5e2irzugtrmmer2gfz6z
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/lfs/codetimeproject
+detected binary path: /usr/local/python3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/lfs/codetimeproject
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7283
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8001).
+bind(): Address already in use [core/socket.c line 769]
+Internal Server Error: /codetime/login/
+Traceback (most recent call last):
+  File "/usr/local/python3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/python3/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/python3/lib/python3.6/site-packages/django/urls/resolvers.py", line 494, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/python3/lib/python3.6/site-packages/django/utils/functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/python3/lib/python3.6/site-packages/django/urls/resolvers.py", line 536, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/python3/lib/python3.6/site-packages/django/utils/functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/python3/lib/python3.6/site-packages/django/urls/resolvers.py", line 529, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/python3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "./codetimeproject/urls.py", line 22, in <module>
+    url(r'^codetime/', include('codetime.urls', namespace="codetime")),
+  File "/usr/local/python3/lib/python3.6/site-packages/django/urls/conf.py", line 39, in include
+    'Specifying a namespace in include() without providing an app_name '
+django.core.exceptions.ImproperlyConfigured: Specifying a namespace in include() without providing an app_name is not supported. Set the app_name attribute in the included module, or pass a 2-tuple containing the list of patterns and app_name instead.
+[pid: 1291|app: 0|req: 6/8] 114.240.85.16 () {42 vars in 773 bytes} [Thu Apr 12 04:08:38 2018] GET /codetime/login/ => generated 106745 bytes in 59 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/python3/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/python3/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/python3/lib/python3.6/site-packages/django/urls/resolvers.py", line 494, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/python3/lib/python3.6/site-packages/django/utils/functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/python3/lib/python3.6/site-packages/django/urls/resolvers.py", line 536, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/python3/lib/python3.6/site-packages/django/utils/functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/python3/lib/python3.6/site-packages/django/urls/resolvers.py", line 529, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/python3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "./codetimeproject/urls.py", line 22, in <module>
+    url(r'^codetime/', include('codetime.urls', namespace="codetime")),
+  File "/usr/local/python3/lib/python3.6/site-packages/django/urls/conf.py", line 39, in include
+    'Specifying a namespace in include() without providing an app_name '
+django.core.exceptions.ImproperlyConfigured: Specifying a namespace in include() without providing an app_name is not supported. Set the app_name attribute in the included module, or pass a 2-tuple containing the list of patterns and app_name instead.
+[pid: 1293|app: 0|req: 3/9] 114.240.85.16 () {42 vars in 743 bytes} [Thu Apr 12 04:08:48 2018] GET / => generated 106550 bytes in 54 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Thu Apr 12 12:10:08 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 09 April 2018 07:51:58
+os: Linux-3.10.0-693.2.2.el7.x86_64 #1 SMP Tue Sep 12 22:26:13 UTC 2017
+nodename: izm5e2irzugtrmmer2gfz6z
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/lfs/codetimeproject
+detected binary path: /usr/local/python3/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/lfs/codetimeproject
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7283
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.3 (default, Apr  9 2018, 15:14:41)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xafe810
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xafe810 pid: 1295 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 1295, cores: 1)
+spawned uWSGI worker 2 (pid: 1297, cores: 1)
+spawned uWSGI worker 3 (pid: 1298, cores: 1)
+spawned uWSGI worker 4 (pid: 1299, cores: 1)
+[pid: 1299|app: 0|req: 1/1] 114.240.85.16 () {42 vars in 773 bytes} [Thu Apr 12 04:10:18 2018] GET /codetime/login/ => generated 558 bytes in 341 msecs (HTTP/1.1 200) 5 headers in 277 bytes (1 switches on core 0)
+[pid: 1297|app: 0|req: 1/2] 114.240.85.16 () {42 vars in 773 bytes} [Thu Apr 12 04:10:17 2018] GET /codetime/login/ => generated 558 bytes in 687 msecs (HTTP/1.1 200) 5 headers in 277 bytes (1 switches on core 0)
+[pid: 1297|app: 0|req: 2/3] 114.240.85.16 () {50 vars in 987 bytes} [Thu Apr 12 04:10:24 2018] POST /codetime/login/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 5 headers in 183 bytes (1 switches on core 0)
+[pid: 1295|app: 0|req: 1/4] 114.240.85.16 () {46 vars in 895 bytes} [Thu Apr 12 04:10:24 2018] GET /codetime/product => generated 0 bytes in 226 msecs (HTTP/1.1 301) 3 headers in 123 bytes (1 switches on core 0)
+[pid: 1297|app: 0|req: 3/5] 114.240.85.16 () {46 vars in 897 bytes} [Thu Apr 12 04:10:25 2018] GET /codetime/product/ => generated 19618 bytes in 7 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1299|app: 0|req: 2/6] 114.240.85.16 () {42 vars in 879 bytes} [Thu Apr 12 04:10:34 2018] GET /codetime/product/ => generated 19618 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1297|app: 0|req: 4/7] 114.240.85.16 () {42 vars in 800 bytes} [Thu Apr 12 07:08:56 2018] GET /codetime/product/ => generated 19618 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1299|app: 0|req: 3/8] 114.240.85.16 () {42 vars in 800 bytes} [Thu Apr 12 07:08:58 2018] GET /codetime/product/ => generated 19618 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1298|app: 0|req: 1/9] 114.240.85.16 () {42 vars in 766 bytes} [Thu Apr 12 07:08:59 2018] GET / => generated 74 bytes in 228 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 1297|app: 0|req: 5/10] 114.240.85.16 () {42 vars in 815 bytes} [Thu Apr 12 07:08:59 2018] GET /admin/login/?next=/admin/ => generated 1853 bytes in 37 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1299|app: 0|req: 4/11] 114.240.85.16 () {42 vars in 778 bytes} [Thu Apr 12 07:09:02 2018] GET /admin/ => generated 0 bytes in 8 msecs (HTTP/1.1 302) 7 headers in 265 bytes (1 switches on core 0)
+[pid: 1298|app: 0|req: 2/12] 114.240.85.16 () {42 vars in 815 bytes} [Thu Apr 12 07:09:02 2018] GET /admin/login/?next=/admin/ => generated 1853 bytes in 30 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1297|app: 0|req: 6/13] 114.240.85.16 () {42 vars in 778 bytes} [Thu Apr 12 07:09:02 2018] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 7 headers in 265 bytes (1 switches on core 0)
+[pid: 1297|app: 0|req: 7/14] 114.240.85.16 () {42 vars in 815 bytes} [Thu Apr 12 07:09:02 2018] GET /admin/login/?next=/admin/ => generated 1853 bytes in 5 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1295|app: 0|req: 2/15] 114.240.85.16 () {50 vars in 1039 bytes} [Thu Apr 12 07:09:04 2018] POST /admin/login/?next=/admin/ => generated 1989 bytes in 158 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1297|app: 0|req: 8/16] 114.240.85.16 () {50 vars in 1039 bytes} [Thu Apr 12 07:09:16 2018] POST /admin/login/?next=/admin/ => generated 1989 bytes in 120 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1297|app: 0|req: 9/17] 114.240.85.16 () {50 vars in 1039 bytes} [Thu Apr 12 07:09:27 2018] POST /admin/login/?next=/admin/ => generated 1989 bytes in 118 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1299|app: 0|req: 5/18] 114.240.85.16 () {50 vars in 1039 bytes} [Thu Apr 12 07:09:37 2018] POST /admin/login/?next=/admin/ => generated 1983 bytes in 130 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1297|app: 0|req: 10/19] 114.240.85.16 () {50 vars in 1039 bytes} [Thu Apr 12 07:09:46 2018] POST /admin/login/?next=/admin/ => generated 1983 bytes in 117 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1299|app: 0|req: 6/20] 114.240.85.16 () {50 vars in 1039 bytes} [Thu Apr 12 07:09:49 2018] POST /admin/login/?next=/admin/ => generated 1983 bytes in 114 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1297|app: 0|req: 11/21] 114.240.85.16 () {50 vars in 1039 bytes} [Thu Apr 12 07:09:56 2018] POST /admin/login/?next=/admin/ => generated 1983 bytes in 137 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1297|app: 0|req: 12/22] 114.240.85.16 () {50 vars in 1039 bytes} [Thu Apr 12 07:10:03 2018] POST /admin/login/?next=/admin/ => generated 1983 bytes in 123 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1297|app: 0|req: 13/23] 114.240.85.16 () {50 vars in 1039 bytes} [Thu Apr 12 07:10:14 2018] POST /admin/login/?next=/admin/ => generated 1983 bytes in 116 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1297|app: 0|req: 14/24] 114.240.85.16 () {50 vars in 1039 bytes} [Thu Apr 12 07:10:30 2018] POST /admin/login/?next=/admin/ => generated 1983 bytes in 119 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1299|app: 0|req: 7/25] 114.240.85.16 () {50 vars in 1039 bytes} [Thu Apr 12 07:10:39 2018] POST /admin/login/?next=/admin/ => generated 1983 bytes in 114 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1297|app: 0|req: 15/26] 114.240.85.16 () {50 vars in 1039 bytes} [Thu Apr 12 07:10:50 2018] POST /admin/login/?next=/admin/ => generated 1984 bytes in 118 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1299|app: 0|req: 8/27] 114.240.85.16 () {50 vars in 1039 bytes} [Thu Apr 12 07:10:58 2018] POST /admin/login/?next=/admin/ => generated 0 bytes in 136 msecs (HTTP/1.1 302) 9 headers in 531 bytes (1 switches on core 0)
+[pid: 1297|app: 0|req: 16/28] 114.240.85.16 () {46 vars in 929 bytes} [Thu Apr 12 07:10:59 2018] GET /admin/ => generated 2939 bytes in 18 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 1297|app: 0|req: 17/29] 114.240.85.16 () {42 vars in 844 bytes} [Thu Apr 12 08:54:20 2018] GET /codetime/product/ => generated 19618 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1299|app: 0|req: 9/30] 114.240.85.16 () {42 vars in 844 bytes} [Thu Apr 12 08:54:21 2018] GET /codetime/product/ => generated 19618 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1298|app: 0|req: 3/31] 114.240.85.16 () {44 vars in 911 bytes} [Thu Apr 12 08:54:23 2018] GET /codetime/orderSearch/ => generated 11795 bytes in 11 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1297|app: 0|req: 18/32] 114.240.85.16 () {44 vars in 907 bytes} [Thu Apr 12 08:54:26 2018] GET /codetime/product/ => generated 19618 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1297|app: 0|req: 19/33] 114.240.85.16 () {44 vars in 911 bytes} [Thu Apr 12 08:54:31 2018] GET /codetime/orderSearch/ => generated 11795 bytes in 8 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1299|app: 0|req: 10/34] 114.240.85.16 () {44 vars in 907 bytes} [Thu Apr 12 08:54:32 2018] GET /codetime/product/ => generated 19618 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1299|app: 0|req: 11/35] 114.240.85.16 () {44 vars in 911 bytes} [Thu Apr 12 08:54:33 2018] GET /codetime/orderSearch/ => generated 11795 bytes in 7 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1295|app: 0|req: 3/36] 114.240.85.16 () {44 vars in 907 bytes} [Thu Apr 12 08:54:35 2018] GET /codetime/product/ => generated 19618 bytes in 6 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 1297|app: 0|req: 20/37] 114.240.85.16 () {42 vars in 810 bytes} [Thu Apr 12 10:36:18 2018] GET / => generated 74 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
