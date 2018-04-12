@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c2878861-5a76-4575-86c6-8314826dfe35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetime/urls.py" afterPath="$PROJECT_DIR$/codetime/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetimeproject/settings.py" afterPath="$PROJECT_DIR$/codetimeproject/settings.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -88,8 +87,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/codetime/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+            <state relative-caret-position="34">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -1059,8 +1058,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/codetime/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
