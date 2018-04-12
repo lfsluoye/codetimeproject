@@ -77,8 +77,14 @@ WSGI_APPLICATION = 'codetimeproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'codetime', #数据库名字，
+        'USER': 'root', #数据库登录用户名
+        'PASSWORD': 'Lfs851003!', #数据库登录密码,我自己修改了
+        'HOST': 'localhost', #数据库所在主机（公司中写真实主机地址）
+        'PORT': '3306', #数据库端口
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 

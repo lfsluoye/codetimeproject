@@ -52,7 +52,7 @@ def productForm(request):
             product_form.save()
             return render(request, 'codetime/product.html')
         else:
-            print(product_form.errors.as_json())
+            print(product_form.errors)
             return render(request, 'codetime/product.html', {"product": product_form.cleaned_data})
     return render(request, 'codetime/product.html')
 
