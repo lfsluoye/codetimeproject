@@ -24,13 +24,13 @@
 {#                    生产单#}
 {#                </div>#}
 {#                 #}
-                <a id="i1" class="list-group-item" href="../product/" >生产单</a>
+                <a id="i1" class="list-group-item" href="{% url 'codetime:product' 0 %}" >生产单</a>
 
 {#                <div id="i2" href="../orderSearch/"   class="list-group-item"  onclick="changeMenu('i2');">#}
 {#                    订单查询#}
 {#                </div>#}
 {#                 #}
-                <a id="i2" class="list-group-item" href="../orderSearch/">订单查询</a>
+                <a id="i2" class="list-group-item" href={% url 'codetime:orderSearch' %}>订单查询</a>
 
 
             </div>

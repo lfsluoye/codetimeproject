@@ -10,7 +10,7 @@ class Person(models.Model):
 
 class Product(models.Model):
 	text1 = models.CharField(max_length=32, null=True)
-	text2 = models.CharField(max_length=32, null=True)
+	text2 = models.CharField(max_length=32, blank=True)
 	text3 = models.CharField(max_length=32, null=True)
 	text4 = models.CharField(max_length=32, null=True)
 	text5 = models.CharField(max_length=32, null=True)
@@ -18,27 +18,29 @@ class Product(models.Model):
 	text7 = models.CharField(max_length=32, null=True)
 	text8 = models.CharField(max_length=32, null=True)
 	text9 = models.CharField(max_length=32, null=True)
-	text10 = models.CharField(max_length=32, null=True)
-	text11 = models.CharField(max_length=32, null=True)
-	text12 = models.CharField(max_length=32, null=True)
-	text13 = models.CharField(max_length=32, null=True)
-	text14 = models.CharField(max_length=32, null=True)
-	text15 = models.CharField(max_length=32, null=True)
-	text16 = models.CharField(max_length=32, null=True)
-	text17 = models.CharField(max_length=32, null=True)
-	text18 = models.CharField(max_length=32, null=True)
-	text19 = models.CharField(max_length=32, null=True)
-	text20 = models.CharField(max_length=32, null=True)
-	text21 = models.CharField(max_length=32, null=True)
-	text22 = models.CharField(max_length=32, null=True)
+	text10 = models.CharField(max_length=32, blank=True)
+	text11 = models.CharField(max_length=32, blank=True)
+	text12 = models.CharField(max_length=32, blank=True)
+	text13 = models.CharField(max_length=32, blank=True)
+	text14 = models.CharField(max_length=32, blank=True)
+	text15 = models.CharField(max_length=32, blank=True)
+	text16 = models.CharField(max_length=32, blank=True)
+	text17 = models.CharField(max_length=32, blank=True)
+	text18 = models.CharField(max_length=32, blank=True)
+	text19 = models.CharField(max_length=32, blank=True)
+	text20 = models.CharField(max_length=32, blank=True)
+	text21 = models.CharField(max_length=32, blank=True)
+	text22 = models.CharField(max_length=32, blank=True)
+	# 下单时间
 	text23 = models.CharField(max_length=32, null=True)
-	text24 = models.CharField(max_length=32, null=True)
-	text25 = models.CharField(max_length=32, null=True)
-	text26 = models.CharField(max_length=32, null=True)
-	text27 = models.CharField(max_length=32, null=True)
-	text28 = models.CharField(max_length=32, null=True)
-	text29 = models.CharField(max_length=32, null=True)
-	text30 = models.CharField(max_length=32, null=True)
+	# 交货日期
+	text24 = models.CharField(max_length=32)
+	text25 = models.CharField(max_length=32, blank=True)
+	text26 = models.CharField(max_length=32, blank=True)
+	text27 = models.CharField(max_length=32, blank=True)
+	text28 = models.CharField(max_length=32, blank=True)
+	text29 = models.CharField(max_length=32, blank=True)
+	text30 = models.CharField(max_length=32, blank=True)
 	# 生产中 false 已完成 true
 	status = models.BooleanField(default=False)
 	# 未发货false 已发货 true
@@ -47,5 +49,4 @@ class Product(models.Model):
 	knot = models.BooleanField(default=False)
 	def __str__(self):
 		return self.text1
-	
-		
+

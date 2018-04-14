@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, HttpResponse
 from django.http import StreamingHttpResponse
 from codetime.Extens import PageList
-from codetime.models import Person
+from codetime.models import Person, Product
 from .forms import LoginForm, ProductForm
 from . import models
 
@@ -43,18 +43,28 @@ def loginForm(request):
             return render(request, 'codetime/login.html', {"person": login_form.cleaned_data})
     return render(request, 'codetime/login.html')
 
+@auth
+def product(request, item_id):
+    if str(item_id) == '0':
+        return render(request, 'codetime/product.html')
+    product = models.Product.objects.filter(id=item_id).first()
+    # product_form = ProductForm(instance=product)
+    return render(request, 'codetime/product.html', {"product": product})
+
 
 @auth
 def productForm(request):
     if request.method == 'POST':
         product_form = ProductForm(request.POST)
         if product_form.is_valid():
+            product_id = request.POST.get('product_id')
+            if product_id != "0":
+                models.Product.objects.filter(id=product_id).delete()
             product_form.save()
             return render(request, 'codetime/product.html')
         else:
             print(product_form.errors)
             return render(request, 'codetime/product.html', {"product": product_form.cleaned_data})
-    return render(request, 'codetime/product.html')
 
 
 @auth
@@ -128,7 +138,7 @@ def orderSearch(request):
 
     page_str = page_obj.page_str("")
     return render(request, 'codetime/orderSearch.html',
-                  {"dataSource": data, 'page_str': page_str, "condition": condition})
+                  {"dataSource": data, 'page_str': page_str, "condition": condition, "nonReceiveAmount":1000, "receiveAmount":1000, "fullAmount":2000})
 
 
 def writeOrderToExcel(request):
@@ -167,7 +177,7 @@ def writeOrderToExcel(request):
     sheet['B30'] = product_obj.text21
     sheet['B31'] = product_obj.text22
     sheet['E3'] = product_obj.text23
-    sheet['E4'] = product_obj.text24
+    # sheet['E4'] = product_obj.text24
     the_file_name = "tmp.xlsx"
     exist_file = os.path.exists(the_file_name)
     if exist_file:

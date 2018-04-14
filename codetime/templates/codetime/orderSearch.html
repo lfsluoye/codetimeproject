@@ -125,7 +125,7 @@
                                     {% for item in dataSource %}
                                     <tr>
                                         <td>{{ item.text23 }}</td>
-                                        <td>{{ item.text2 }}</td>
+                                        <td>{{ item.text3 }}</td>
                                         <td>{{ item.text1 }}</td>
                                         <td>{{ item.text5 }}</td>
                                         <td>{{ item.text8 }}</td>
@@ -146,7 +146,7 @@
                                         {% else %}
                                             <td style="color: red" onclick="changeKnot({{ item.id}},'{{ item.knot }}');">未结款</td>
                                         {% endif %}
-                                        <td> <p id="order_edit" class="left">编辑</p>
+                                        <td><p class="left"><a href="{% url 'codetime:product' item.id %}">编辑</a></p>
                                             <p class="left"  onclick="writeDataToExcel({{ item.id }});">打印</p></td>
 
                                     </tr>
@@ -154,6 +154,14 @@
                                 </tbody>
                             </table>
                         </div>
+            <div class="statistical">
+                <p class="left"> 未收金额: <b>{{ nonReceiveAmount }}</b> 元</p>
+{#                <label for="not receive">未收金额:</label>#}
+                <p class="left">已收金额: <b>{{ receiveAmount }}</b> 元 </p>
+{#                <label for="receive">已收金额:</label>#}
+                <p>全部金额: <b>{{ fullAmount }}</b> 元 </p>
+{#                <label for="fullAmount">全部金额:</label>#}
+            </div>
         </div>
         <div class="bodybottom">
             <div class=" Page navigation pagination">
