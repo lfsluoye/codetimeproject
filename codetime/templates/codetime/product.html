@@ -12,6 +12,7 @@
             </div>
             <form class="form-horizontal" action="{% url 'codetime:productForm' %}" method="post">
             {% csrf_token %}
+                <input type="hidden" name="product_id" value="{{ product.id|default:"0"}}">
                 <div class="contentbody">
                     <!--startprint-->
                         <div class="bodyhead">

@@ -3,8 +3,8 @@ from . import views
 app_name = 'codetime'
 urlpatterns = [
     url(r'^login/$', views.loginForm, name='loginForm'),
-    url(r'^product/$', views.productForm, name='productForm'),
-    url(r'^product/(?P<product_id>\d+)/$', views.productForm, name='productForm'),
+    url(r'^product/(?P<item_id>\d+)$', views.product, name='product'),
+    url(r'^productForm/$', views.productForm, name='productForm'),
     url(r'^orderSearch/$', views.orderSearch, name='orderSearch'),
     url(r'^changeShipments/$', views.changeShipments, name='changeShipments'),
     url(r'^changeStatus/$', views.changeStatus, name='changeStatus'),
