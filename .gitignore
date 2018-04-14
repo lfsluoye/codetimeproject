@@ -120,3 +120,5 @@ tmp.xlsx
 .idea/workspace.xml
 
 .idea/workspace.xml
+
+codetime/migrations/0006_auto_20180414_0940.py
