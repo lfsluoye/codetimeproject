@@ -3,5 +3,6 @@
         <chdir>/home/lfs/codetimeproject</chdir><!-- 项目路径 -->
             <module>codetimeproject.wsgi</module>
                 <processes>4</processes> <!-- 进程数 --> 
-    <daemonize>uwsgi.log</daemonize><!-- 日志文件 -->
+		<py-autoreload>1</py-autoreload>
+    <daemonize>/var/codetime/uwsgi.log</daemonize><!-- 日志文件 -->
 </uwsgi>
