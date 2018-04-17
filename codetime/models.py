@@ -2,13 +2,20 @@ from django.db import models
 
 # Create your models here.
 class Person(models.Model):
-	name = models.CharField(max_length=32, null=True)
+	name = models.CharField(max_length=32, null=True, unique=True)
 	password = models.CharField(max_length=32, null=True)
+	userLimit_choice = (
+		(0, '超级用户'),
+		(1, '普通员工'),
+		(2, '编外人员'),
+	)
+	userlimitid = models.IntegerField(choices=userLimit_choice, default=0, blank=True)
 
 	def __str__(self):
 		return self.name
 
 class Product(models.Model):
+	userId = models.ForeignKey('Person', default = 1, editable=False)
 	text1 = models.CharField(max_length=32, null=True)
 	text2 = models.CharField(max_length=32, blank=True, default="")
 	text3 = models.CharField(max_length=32, null=True)
