@@ -15,7 +15,7 @@ class Person(models.Model):
 		return self.name
 
 class Product(models.Model):
-	userId = models.ForeignKey('Person', default = 1, editable=False)
+	userId = models.ForeignKey('Person', default = 1, editable=False, on_delete=models.CASCADE)
 	text1 = models.CharField(max_length=32, null=True)
 	text2 = models.CharField(max_length=32, blank=True, default="")
 	text3 = models.CharField(max_length=32, null=True)
