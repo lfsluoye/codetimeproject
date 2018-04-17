@@ -122,3 +122,11 @@ tmp.xlsx
 .idea/workspace.xml
 
 codetime/migrations/0006_auto_20180414_0940.py
+
+codetime/migrations/
+
+codetime/migrations/__init__.py
+
+codetime/migrations/0001_initial.py
+
+codetime/migrations/0006_auto_20180414_0946.py

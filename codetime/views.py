@@ -25,21 +25,19 @@ def auth(func):
 # 用户登录函数
 def loginForm(request):
     if request.method == 'POST':
+        name = request.POST.get('name', 'NAME')
+
+        person = models.Person.objects.filter(name=name).first()
         login_form = LoginForm(request.POST)
-        if login_form.is_valid():
-            name = request.POST.get('name', 'NAME')
+        if person:
             password = request.POST.get('password', 'PASSWORD')
-            person = Person()
-            person.name = "lifushuai"
-            person.password = "123456"
-            # person = models.Person.objects.get(pk=1)
-            if name == person.name and password == person.password:
+            if password == person.password:
                 res = redirect('/codetime/product/0')
                 res.set_cookie('username111', person)
                 return res
             return render(request, 'codetime/login.html')
         else:
-            print(login_form.errors.as_json())
+            print(login_form.errors)
             return render(request, 'codetime/login.html', {"person": login_form.cleaned_data})
     return render(request, 'codetime/login.html')
 
