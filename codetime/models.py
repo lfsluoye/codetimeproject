@@ -19,6 +19,7 @@ class Product(models.Model):
 	text1 = models.CharField(max_length=32, null=True)
 	text2 = models.CharField(max_length=32, blank=True, default="")
 	text3 = models.CharField(max_length=32, null=True)
+	# text4 = models.CharField(max_length=32, null=True)
 	text4 = models.DecimalField(max_digits=10, decimal_places=2)
 	text5 = models.CharField(max_length=32, null=True)
 	text6 = models.CharField(max_length=32, null=True)
