@@ -4,7 +4,7 @@ from codetime.Extens import PageList
 from codetime.models import Person, Product
 from .forms import LoginForm, ProductForm
 from . import models
-
+from django.db.models import Sum
 from openpyxl import load_workbook
 
 import os
@@ -135,8 +135,28 @@ def orderSearch(request):
     data = dataSource[page_obj.start:page_obj.end]
 
     page_str = page_obj.page_str("")
-    return render(request, 'codetime/orderSearch.html',
-                  {"dataSource": data, 'page_str': page_str, "condition": condition, "nonReceiveAmount":1000, "receiveAmount":1000, "fullAmount":2000})
+
+    nonReceiveAmount = 0
+    receiveAmount = 0
+    nonReceiveDic = Product.objects.all().filter(knot=0).aggregate(amount=Sum('text4'))
+    if nonReceiveDic["amount"]:
+        nonReceiveAmount = nonReceiveDic["amount"]
+
+    receiveDic = Product.objects.all().filter(knot=1).aggregate(amount=Sum('text4'))
+    if receiveDic["amount"]:
+        receiveAmount = receiveDic["amount"]
+
+    fullAmount = nonReceiveAmount + receiveAmount
+    backDic = {}
+    backDic["dataSource"] = data
+    backDic["page_str"] = page_str
+    backDic["condition"] = condition
+    backDic["nonReceiveAmount"] = nonReceiveAmount
+    backDic["receiveAmount"] = receiveAmount
+    backDic["fullAmount"] = fullAmount
+    # {"dataSource": data, 'page_str': page_str, "condition": condition, "nonReceiveAmount": 1000, "receiveAmount": 1000,
+    #  "fullAmount": 2000}
+    return render(request, 'codetime/orderSearch.html',backDic)
 
 
 def writeOrderToExcel(request):
