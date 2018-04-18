@@ -6,7 +6,7 @@ from .forms import LoginForm, ProductForm
 from . import models
 from django.db.models import Sum
 from openpyxl import load_workbook
-
+from decimal import Decimal
 import os
 
 
@@ -135,16 +135,16 @@ def orderSearch(request):
     data = dataSource[page_obj.start:page_obj.end]
 
     page_str = page_obj.page_str("")
-
     nonReceiveAmount = 0
     receiveAmount = 0
+
     nonReceiveDic = Product.objects.all().filter(knot=0).aggregate(amount=Sum('text4'))
     if nonReceiveDic["amount"]:
-        nonReceiveAmount = nonReceiveDic["amount"]
+        nonReceiveAmount = nonReceiveDic["amount"].quantize(Decimal('0.00'))
 
     receiveDic = Product.objects.all().filter(knot=1).aggregate(amount=Sum('text4'))
     if receiveDic["amount"]:
-        receiveAmount = receiveDic["amount"]
+        receiveAmount = receiveDic["amount"].quantize(Decimal('0.00'))
 
     fullAmount = nonReceiveAmount + receiveAmount
     backDic = {}
