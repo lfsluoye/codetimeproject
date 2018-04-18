@@ -23,7 +23,7 @@ class Product(models.Model):
 	text5 = models.CharField(max_length=32, null=True)
 	text6 = models.CharField(max_length=32, null=True)
 	text7 = models.CharField(max_length=32, null=True)
-	text8 = models.PositiveIntegerField()
+	text8 = models.CharField(max_length=32, null=True)
 	text9 = models.CharField(max_length=32, null=True)
 	text10 = models.CharField(max_length=32, blank=True, default="")
 	text11 = models.CharField(max_length=32, blank=True, default="")
