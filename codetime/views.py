@@ -55,10 +55,15 @@ def productForm(request):
     if request.method == 'POST':
         product_form = ProductForm(request.POST)
         if product_form.is_valid():
+            unit = float(product_form.cleaned_data["text4"])
+            number = int(product_form.cleaned_data["text8"])
+            # product_form.changed_data = unit*number
+            temp = product_form.save(commit=False)
+            temp.amount = unit*number
+            temp.save()
             product_id = request.POST.get('product_id')
             if product_id != "0":
                 models.Product.objects.filter(id=product_id).delete()
-            product_form.save()
             return render(request, 'codetime/product.html')
         else:
             print(product_form.errors)
@@ -138,11 +143,11 @@ def orderSearch(request):
     nonReceiveAmount = 0
     receiveAmount = 0
 
-    nonReceiveDic = Product.objects.all().filter(knot=0).aggregate(amount=Sum('text4'))
+    nonReceiveDic = Product.objects.all().filter(knot=0).aggregate(amount=Sum('amount'))
     if nonReceiveDic["amount"]:
         nonReceiveAmount = nonReceiveDic["amount"].quantize(Decimal('0.00'))
 
-    receiveDic = Product.objects.all().filter(knot=1).aggregate(amount=Sum('text4'))
+    receiveDic = Product.objects.all().filter(knot=1).aggregate(amount=Sum('amount'))
     if receiveDic["amount"]:
         receiveAmount = receiveDic["amount"].quantize(Decimal('0.00'))
 
@@ -169,7 +174,7 @@ def writeOrderToExcel(request):
     sheet['B3'] = product_obj.text1
     sheet['B4'] = product_obj.text2
     sheet['G3'] = product_obj.text3
-    sheet['G4'] = product_obj.text4
+    sheet['G4'] = product_obj.amount
     sheet['B7'] = product_obj.text5
     sheet['B8'] = product_obj.text6
     sheet['B9'] = product_obj.text7

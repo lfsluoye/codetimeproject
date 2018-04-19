@@ -20,11 +20,14 @@ class Product(models.Model):
 	text2 = models.CharField(max_length=32, blank=True, default="")
 	text3 = models.CharField(max_length=32, null=True)
 	# text4 = models.CharField(max_length=32, null=True)
-	text4 = models.DecimalField(max_digits=10, decimal_places=2)
+	# 单价
+	text4 = models.DecimalField(max_digits=10, decimal_places=2,default=0)
+	#总金额
+	amount = models.DecimalField(max_digits=10, decimal_places=2, default=0, editable=False)
 	text5 = models.CharField(max_length=32, null=True)
 	text6 = models.CharField(max_length=32, null=True)
 	text7 = models.CharField(max_length=32, null=True)
-	text8 = models.CharField(max_length=32, null=True)
+	text8 = models.PositiveIntegerField(default=0)
 	text9 = models.CharField(max_length=32, null=True)
 	text10 = models.CharField(max_length=32, blank=True, default="")
 	text11 = models.CharField(max_length=32, blank=True, default="")
