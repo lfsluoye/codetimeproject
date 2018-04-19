@@ -129,8 +129,8 @@
                                         <td>{{ item.text1 }}</td>
                                         <td>{{ item.text5 }}</td>
                                         <td>{{ item.text8 }}</td>
-                                        <td>单价</td>
                                         <td>{{ item.text4 }}</td>
+                                        <td>{{ item.amount }}</td>
                                         {% if item.status %}
                                             <td onclick="changeStatus({{ item.id}},'{{ item.status }}');">已完成</td>
                                         {% else %}

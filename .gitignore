@@ -130,3 +130,5 @@ codetime/migrations/__init__.py
 codetime/migrations/0001_initial.py
 
 codetime/migrations/0006_auto_20180414_0946.py
+
+codetime/migrations/0001_initial.py
