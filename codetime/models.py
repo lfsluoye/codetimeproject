@@ -21,7 +21,7 @@ class Product(models.Model):
 	text3 = models.CharField(max_length=32, null=True)
 	# text4 = models.CharField(max_length=32, null=True)
 	# 单价
-	text4 = models.DecimalField(max_digits=10, decimal_places=2,default=0)
+	text4 = models.DecimalField(max_digits=10, decimal_places=3,default=0)
 	#总金额
 	amount = models.DecimalField(max_digits=10, decimal_places=2, default=0, editable=False)
 	text5 = models.CharField(max_length=32, null=True)
