@@ -174,7 +174,7 @@ def writeOrderToExcel(request):
     sheet['B3'] = product_obj.text1
     sheet['B4'] = product_obj.text2
     sheet['G3'] = product_obj.text3
-    sheet['G4'] = product_obj.amount
+    # sheet['G4'] = product_obj.amount
     sheet['B7'] = product_obj.text5
     sheet['B8'] = product_obj.text6
     sheet['B9'] = product_obj.text7
@@ -200,7 +200,7 @@ def writeOrderToExcel(request):
     sheet['B30'] = product_obj.text21
     sheet['B31'] = product_obj.text22
     sheet['E3'] = product_obj.text23
-    # sheet['E4'] = product_obj.text24
+    sheet['E4'] = product_obj.text24
     the_file_name = "tmp.xlsx"
     exist_file = os.path.exists(the_file_name)
     if exist_file:
