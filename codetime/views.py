@@ -129,10 +129,10 @@ def orderSearch(request):
         condition["knot"] = int(knot)
     dataSource = models.Product.objects.all()
     if len(dataSource) == 0:
-        return render(request, 'codetime/orderSearch.html')
+        return render(request, 'codetime/orderSearch.html',{"nonReceiveAmount": 0, "receiveAmount": 0,"fullAmount": 0})
     dataSource = models.Product.objects.filter(**condition).order_by('-text23')
     if len(dataSource) == 0:
-        return render(request, 'codetime/orderSearch.html')
+        return render(request, 'codetime/orderSearch.html',{"nonReceiveAmount": 0, "receiveAmount": 0,"fullAmount": 0})
     current_page = request.GET.get('p', 1)
     current_page = int(current_page)
     val = 10
@@ -143,11 +143,11 @@ def orderSearch(request):
     nonReceiveAmount = 0
     receiveAmount = 0
 
-    nonReceiveDic = Product.objects.all().filter(knot=0).aggregate(amount=Sum('amount'))
+    nonReceiveDic = dataSource.filter(knot=0).aggregate(amount=Sum('amount'))
     if nonReceiveDic["amount"]:
         nonReceiveAmount = nonReceiveDic["amount"].quantize(Decimal('0.00'))
 
-    receiveDic = Product.objects.all().filter(knot=1).aggregate(amount=Sum('amount'))
+    receiveDic = dataSource.filter(knot=1).aggregate(amount=Sum('amount'))
     if receiveDic["amount"]:
         receiveAmount = receiveDic["amount"].quantize(Decimal('0.00'))
 
