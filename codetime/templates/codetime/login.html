@@ -5,22 +5,33 @@
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>登录</title>
+    <link rel="stylesheet" href="/static/codetime/css/common.css" type="text/css">
     <link rel="stylesheet" href="/static/codetime/css/login.css" type="text/css">
 
 </head>
 <body>
-    <div class="login">
-        <form action="{% url 'codetime:loginForm' %}" method="post">
+{#    <div class="backImage">{#}
+{#        #}
+{#    </div>#}
+
+    <div id="login">
+        <div class="logo">
+        <img id="logo_img" src="/static/codetime/image/logo.png" alt="">
+    </div>
+        <div>
+            <form action="{% url 'codetime:loginForm' %}" method="post">
 	{% csrf_token %}
-		<label for="name">账号</label>
+		<h3>用户名</h3>
 		<input id="name" type="text" required = "required" name="name" value="{{ person.name }}">
-		<br/>
-		<label for="password">密码</label>
+            </br>
+		<h3>密码</h3>
 		<input id="password" type="password" required = "required" name="password" value="{{ person.password }}">
 		<button class="but" type="submit">登录</button>
 	</form>
+        </div>
+
     </div>
 
-	
+
 </body>
 </html>
