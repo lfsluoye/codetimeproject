@@ -130,7 +130,7 @@ def orderSearch(request):
     dataSource = models.Product.objects.all()
     if len(dataSource) == 0:
         return render(request, 'codetime/orderSearch.html',{"nonReceiveAmount": 0, "receiveAmount": 0,"fullAmount": 0})
-    dataSource = models.Product.objects.filter(**condition).order_by('-text23')
+    dataSource = models.Product.objects.filter(**condition).order_by('-text3')
     if len(dataSource) == 0:
         return render(request, 'codetime/orderSearch.html',{"nonReceiveAmount": 0, "receiveAmount": 0,"fullAmount": 0})
     current_page = request.GET.get('p', 1)
