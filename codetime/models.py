@@ -16,19 +16,22 @@ class Person(models.Model):
 
 class Product(models.Model):
 	userId = models.ForeignKey('Person', default = 1, editable=False, on_delete=models.CASCADE)
+	# 客户
 	text1 = models.CharField(max_length=32, null=True)
+	# 地址
 	text2 = models.CharField(max_length=32, blank=True, default="")
-	text3 = models.CharField(max_length=32, null=True)
-	# text4 = models.CharField(max_length=32, null=True)
+	# 合同编号
+	text3 = models.CharField(max_length=32, blank=True, default="")
 	# 单价
 	text4 = models.DecimalField(max_digits=10, decimal_places=3,default=0)
 	#总金额
 	amount = models.DecimalField(max_digits=10, decimal_places=2, default=0, editable=False)
+	# 产品名称
 	text5 = models.CharField(max_length=32, null=True)
-	text6 = models.CharField(max_length=32, null=True)
-	text7 = models.CharField(max_length=32, null=True)
+	text6 = models.CharField(max_length=32, blank=True, default="")
+	text7 = models.CharField(max_length=32, blank=True, default="")
 	text8 = models.PositiveIntegerField(default=0)
-	text9 = models.CharField(max_length=32, null=True)
+	text9 = models.CharField(max_length=32, blank=True, default="")
 	text10 = models.CharField(max_length=32, blank=True, default="")
 	text11 = models.CharField(max_length=32, blank=True, default="")
 	text12 = models.CharField(max_length=32, blank=True, default="")
@@ -45,7 +48,7 @@ class Product(models.Model):
 	# 下单时间
 	text23 = models.CharField(max_length=32, null=True)
 	# 交货日期
-	text24 = models.CharField(max_length=32, null=True)
+	text24 = models.CharField(max_length=32, blank=True, default="")
 	text25 = models.CharField(max_length=32, blank=True, default="")
 	text26 = models.CharField(max_length=32, blank=True, default="")
 	text27 = models.CharField(max_length=32, blank=True, default="")
