@@ -21,7 +21,7 @@ class Product(models.Model):
 	# 地址
 	text2 = models.CharField(max_length=32, blank=True, default="")
 	# 合同编号
-	text3 = models.CharField(max_length=32, blank=True, default="")
+	text3 = models.CharField(max_length=32, blank=True, default="", editable=False)
 	# 单价
 	text4 = models.DecimalField(max_digits=10, decimal_places=3,default=0)
 	#总金额
