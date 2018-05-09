@@ -55,15 +55,20 @@ def productForm(request):
     if request.method == 'POST':
         product_form = ProductForm(request.POST)
         if product_form.is_valid():
+            product_id = request.POST.get('product_id')
             unit = float(product_form.cleaned_data["text4"])
             number = int(product_form.cleaned_data["text8"])
-            # product_form.changed_data = unit*number
-            temp = product_form.save(commit=False)
-            temp.amount = unit*number
-            temp.save()
-            product_id = request.POST.get('product_id')
-            if product_id != "0":
-                models.Product.objects.filter(id=product_id).delete()
+            if product_id == "0":
+                temp = product_form.save(commit=False)
+                temp.amount = unit * number
+                temp.save()
+            else:
+                model = models.Product.objects.filter(id=product_id).first()
+                temp = product_form.save(commit=False)
+                temp.amount = unit * number
+                temp.id = product_id
+                temp.text3 = model.text3
+                temp.save()
             return render(request, 'codetime/product.html')
         else:
             print(product_form.errors)
