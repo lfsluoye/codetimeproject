@@ -63,14 +63,12 @@
 	margin-left: 1080px;
 	width: 200px;
 }
-.MytableView{
-	
-}
+
 .pagination .page{
-            display: inline-block;
-            padding: 5px;
-            background-color: #edefff;
-            margin: 5px;
+	display: inline-block;
+	padding: 5px;
+	background-color: #edefff;
+	margin: 5px;
 }
 .pagination .page.active {
 	background-color: #a58780;
