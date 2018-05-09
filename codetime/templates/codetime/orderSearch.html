@@ -132,22 +132,22 @@
                                         <td>{{ item.text4 }}</td>
                                         <td>{{ item.amount }}</td>
                                         {% if item.status %}
-                                            <td onclick="changeStatus({{ item.id}},'{{ item.status }}');">已完成</td>
+                                            <td><button  onclick="changeStatus({{ item.id}},'{{ item.status }}');">已完成</button></td>
                                         {% else %}
-                                            <td style="color: red" onclick="changeStatus({{ item.id}},'{{ item.status }}');">生产中</td>
+                                            <td><button style="color: red" onclick="changeStatus({{ item.id}},'{{ item.status }}');">生产中</button></td>
                                         {% endif %}
                                         {% if item.shipments %}
-                                            <td  onclick="changeShipments({{ item.id}},'{{ item.shipments }}');">已发货</td>
+                                            <td><button onclick="changeShipments({{ item.id}},'{{ item.shipments }}');">已发货</button></td>
                                         {% else %}
-                                            <td style="color: red" onclick="changeShipments({{ item.id}},'{{ item.shipments }}')">未发货</td>
+                                            <td><button style="color: red" onclick="changeShipments({{ item.id}},'{{ item.shipments }}')">未发货</button></td>
                                         {% endif %}
                                         {% if item.knot %}
-                                            <td onclick="changeKnot({{ item.id}},'{{ item.knot }}');">已结款</td>
+                                            <td><button onclick="changeKnot({{ item.id}},'{{ item.knot }}');">已结款</button></td>
                                         {% else %}
-                                            <td style="color: red" onclick="changeKnot({{ item.id}},'{{ item.knot }}');">未结款</td>
+                                            <td ><button style="color: red" onclick="changeKnot({{ item.id}},'{{ item.knot }}');">未结款</button></td>
                                         {% endif %}
                                         <td><p class="left"><a href="{% url 'codetime:product' item.id %}">编辑</a></p>
-                                            <p class="left"  onclick="writeDataToExcel({{ item.id }});">打印</p></td>
+                                            <button class="left m_left"  onclick="writeDataToExcel({{ item.id }});">打印</button></td>
 
                                     </tr>
                                     {% endfor %}
@@ -157,7 +157,7 @@
             <div class="statistical">
                 <p class="left"> 未收金额: <b>{{ nonReceiveAmount }}</b> 元</p>
 {#                <label for="not receive">未收金额:</label>#}
-                <p class="left">已收金额: <b>{{ receiveAmount }}</b> 元 </p>
+                <p class="left m_left m_right">已收金额: <b>{{ receiveAmount }}</b> 元 </p>
 {#                <label for="receive">已收金额:</label>#}
                 <p>全部金额: <b>{{ fullAmount }}</b> 元 </p>
 {#                <label for="fullAmount">全部金额:</label>#}
