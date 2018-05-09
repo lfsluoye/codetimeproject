@@ -66,3 +66,13 @@
 .MytableView{
 	
 }
+.pagination .page{
+            display: inline-block;
+            padding: 5px;
+            background-color: #edefff;
+            margin: 5px;
+}
+.pagination .page.active {
+	background-color: #a58780;
+	color: white;
+}

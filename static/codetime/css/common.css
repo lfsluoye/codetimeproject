@@ -5,3 +5,9 @@
 .right{
 	float: right;
 }
+.m_left{
+	margin-left: 10px;
+}
+.m_right{
+	margin-right: 10px;
+}
