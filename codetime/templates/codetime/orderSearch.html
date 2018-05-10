@@ -146,8 +146,9 @@
                                         {% else %}
                                             <td ><button style="color: red" onclick="changeKnot({{ item.id}},'{{ item.knot }}');">未结款</button></td>
                                         {% endif %}
-                                        <td><p class="left"><a href="{% url 'codetime:product' item.id %}">编辑</a></p>
-                                            <button class="left m_left"  onclick="writeDataToExcel({{ item.id }});">打印</button></td>
+                                        <td>
+                                            <p class="left"><a href="{% url 'codetime:product' item.id %}">编辑</a></p>
+                                            <button type="button" class="left m_left"  onclick="writeDataToExcel({{ item.id }});">打印</button></td>
 
                                     </tr>
                                     {% endfor %}
