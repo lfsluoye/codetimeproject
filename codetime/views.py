@@ -9,8 +9,12 @@ from openpyxl import load_workbook
 from decimal import Decimal
 import os
 
-
-
+def jtbq(request):
+    return render(request, 'codetime/jtbq.html')
+def code(request):
+    return render(request, 'codetime/code.html')
+def index(request):
+    return render(request, 'codetime/index.html')
 # Create your views here.
 def auth(func):
     def inner(reqeust, *args, **kwargs):
@@ -26,14 +30,14 @@ def auth(func):
 def loginForm(request):
     if request.method == 'POST':
         name = request.POST.get('name', 'NAME')
-
         person = models.Person.objects.filter(name=name).first()
         login_form = LoginForm(request.POST)
         if person:
             password = request.POST.get('password', 'PASSWORD')
             if password == person.password:
                 res = redirect('/codetime/product/0')
-                res.set_cookie('username111', person)
+                res.set_cookie('username111', person.name)
+                res.set_cookie('userlimitid', person.userlimitid)
                 return res
             return render(request, 'codetime/login.html')
         else:
