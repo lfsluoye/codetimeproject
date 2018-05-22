@@ -182,7 +182,7 @@ def writeOrderToExcel(request):
     sheet = wb.active
     sheet['B3'] = product_obj.text1
     sheet['B4'] = product_obj.text2
-    sheet['G3'] = product_obj.text3
+    sheet['H3'] = product_obj.text3
     # sheet['G4'] = product_obj.amount
     sheet['B7'] = product_obj.text5
     sheet['B8'] = product_obj.text6
