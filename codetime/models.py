@@ -55,6 +55,7 @@ class Product(models.Model):
 	text28 = models.CharField(max_length=32, blank=True, default="")
 	text29 = models.CharField(max_length=32, blank=True, default="")
 	text30 = models.CharField(max_length=32, blank=True, default="")
+	text31 = models.CharField(max_length=32, blank=True, default="")
 	# 生产中 false 已完成 true
 	status = models.BooleanField(default=False)
 	# 未发货false 已发货 true
