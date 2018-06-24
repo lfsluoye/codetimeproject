@@ -38,6 +38,7 @@ def loginForm(request):
                 res = redirect('/codetime/product/0')
                 res.set_cookie('username111', person.name)
                 res.set_cookie('userlimitid', person.userlimitid)
+                res.set_cookie('userId', person.id)
                 return res
             return render(request, 'codetime/login.html')
         else:
@@ -62,9 +63,11 @@ def productForm(request):
             product_id = request.POST.get('product_id')
             unit = float(product_form.cleaned_data["text4"])
             number = int(product_form.cleaned_data["text8"])
+            userId = request.COOKIES.get('userId')
             if product_id == "0":
                 temp = product_form.save(commit=False)
                 temp.amount = unit * number
+                temp.userId = userId
                 temp.save()
             else:
                 model = models.Product.objects.filter(id=product_id).first()
@@ -72,6 +75,7 @@ def productForm(request):
                 temp.amount = unit * number
                 temp.id = product_id
                 temp.text3 = model.text3
+                temp.userId = userId
                 temp.save()
             return render(request, 'codetime/product.html')
         else:
@@ -81,7 +85,8 @@ def productForm(request):
 
 @auth
 def changeShipments(request):
-    if request.method == 'POST':
+    limitId = request.COOKIES.get('userlimitid')
+    if request.method == 'POST' and limitId == '0':
         item_id = int(request.POST.get('item_id'))
         shipments = request.POST.get('item_shipments')
         if shipments == 'True':
@@ -93,7 +98,8 @@ def changeShipments(request):
 
 @auth
 def changeStatus(request):
-    if request.method == 'POST':
+    limitId = request.COOKIES.get('userlimitid')
+    if request.method == 'POST' and limitId == '0':
         item_id = int(request.POST.get('item_id'))
         status = request.POST.get('item_status')
         if status == 'True':
@@ -105,7 +111,8 @@ def changeStatus(request):
 
 @auth
 def changeKnot(request):
-    if request.method == 'POST':
+    limitId = request.COOKIES.get('userlimitid')
+    if request.method == 'POST' and limitId == '0':
         item_id = int(request.POST.get('item_id'))
         knot = request.POST.get('item_knot')
         if knot == 'True':
@@ -136,10 +143,16 @@ def orderSearch(request):
         condition["status"] = int(status)
     if knot != "全部":
         condition["knot"] = int(knot)
+    limitId = request.COOKIES.get('userlimitid')
+    userId = request.COOKIES.get('userId')
     dataSource = models.Product.objects.all()
+    if limitId != '0':
+        dataSource = dataSource.filter(userId=userId)
     if len(dataSource) == 0:
         return render(request, 'codetime/orderSearch.html',{"nonReceiveAmount": 0, "receiveAmount": 0,"fullAmount": 0})
     dataSource = models.Product.objects.filter(**condition).order_by('-text3')
+    if limitId != '0':
+        dataSource = dataSource.filter(userId=userId)
     if len(dataSource) == 0:
         return render(request, 'codetime/orderSearch.html',{"nonReceiveAmount": 0, "receiveAmount": 0,"fullAmount": 0})
     current_page = request.GET.get('p', 1)
