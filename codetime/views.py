@@ -84,6 +84,15 @@ def productForm(request):
 
 
 @auth
+def editProduct(request):
+    limitId = request.COOKIES.get('userlimitid')
+    if limitId == '0':
+        return HttpResponse('OK')
+    else:
+        return  HttpResponse('False')
+
+
+@auth
 def changeShipments(request):
     limitId = request.COOKIES.get('userlimitid')
     if request.method == 'POST' and limitId == '0':

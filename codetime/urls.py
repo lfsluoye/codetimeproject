@@ -6,6 +6,7 @@ urlpatterns = [
     url(r'^code/$', views.code, name='code'),
     url(r'^login/$', views.loginForm, name='loginForm'),
     url(r'^product/(?P<item_id>\d+)$', views.product, name='product'),
+    url(r'^editProduct/$', views.editProduct, name='editProduct'),
     url(r'^productForm/$', views.productForm, name='productForm'),
     url(r'^orderSearch/$', views.orderSearch, name='orderSearch'),
     url(r'^changeShipments/$', views.changeShipments, name='changeShipments'),
