@@ -104,7 +104,7 @@ def changeShipments(request):
             models.Product.objects.filter(id=item_id).update(shipments=True)
     return HttpResponse('OK')
 
-
+#是否发货
 @auth
 def changeStatus(request):
     limitId = request.COOKIES.get('userlimitid')
@@ -118,6 +118,7 @@ def changeStatus(request):
     return HttpResponse('OK')
 
 
+#是否结款
 @auth
 def changeKnot(request):
     limitId = request.COOKIES.get('userlimitid')

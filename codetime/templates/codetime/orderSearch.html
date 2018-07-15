@@ -209,7 +209,7 @@ function changeShipments(item_id, item_shipments) {
         url: "/codetime/changeShipments/",
         data: {
             csrfmiddlewaretoken: '{{ csrf_token }}',
-            item_id: itm_id,
+            item_id: item_id,
             item_shipments: item_shipments,
         },
         success: function(data) {
