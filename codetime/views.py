@@ -141,10 +141,10 @@ def orderSearch(request):
     shipments = request.GET.get('shipments', "全部")
     status = request.GET.get('status', "全部")
     knot = request.GET.get('knot', "全部")
-    if len(text1) != 0:
-        condition["text1"] = text1
-    if len(text2) != 0:
-        condition["text2"] = text2
+    # if len(text1) != 0:
+    #     condition["text1"] = text1
+    # if len(text2) != 0:
+    #     condition["text2"] = text2
     if len(text23) != 0:
         condition["text24"] = text23
     if shipments != "全部":
@@ -161,6 +161,10 @@ def orderSearch(request):
     if len(dataSource) == 0:
         return render(request, 'codetime/orderSearch.html',{"nonReceiveAmount": 0, "receiveAmount": 0,"fullAmount": 0})
     dataSource = models.Product.objects.filter(**condition).order_by('-text3')
+    if len(text1) != 0:
+        dataSource = dataSource.filter(text1__icontains=text1)
+    if len(text2) != 0:
+        dataSource = dataSource.filter(text2__icontains=text2)
     if limitId != '0':
         dataSource = dataSource.filter(userId=userId)
     if len(dataSource) == 0:
