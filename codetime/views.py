@@ -164,7 +164,7 @@ def orderSearch(request):
     if len(text1) != 0:
         dataSource = dataSource.filter(text1__icontains=text1)
     if len(text2) != 0:
-        dataSource = dataSource.filter(text2__icontains=text2)
+        dataSource = dataSource.filter(text5__icontains=text2)
     if limitId != '0':
         dataSource = dataSource.filter(userId=userId)
     if len(dataSource) == 0:
