@@ -175,7 +175,7 @@ def orderSearch(request):
     page_obj = PageList.Page(current_page, len(dataSource), val)
     data = dataSource[page_obj.start:page_obj.end]
 
-    page_str = page_obj.page_str("")
+    page_str = page_obj.page_str("&text1="+text1+"&text2"+text2+"%text23&"+text23+"&shipments"+status+"&knot"+knot)
     nonReceiveAmount = 0
     receiveAmount = 0
 
@@ -191,6 +191,10 @@ def orderSearch(request):
     backDic = {}
     backDic["dataSource"] = data
     backDic["page_str"] = page_str
+    if len(text1) != 0:
+        condition["text1"] = text1
+    if len(text2) != 0:
+        condition["text2"] = text2
     backDic["condition"] = condition
     backDic["nonReceiveAmount"] = nonReceiveAmount
     backDic["receiveAmount"] = receiveAmount

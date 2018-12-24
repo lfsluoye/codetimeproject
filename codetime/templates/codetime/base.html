@@ -56,7 +56,7 @@
     $(document).ready(function () {
        $(".navlist a").each(function () {
            $this = $(this);
-           if($this[0].href==String(window.location)){
+           if(String(window.location).indexOf($this[0].href) > -1){
                $this.addClass("active")
            }
        })
