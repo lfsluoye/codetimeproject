@@ -10,7 +10,7 @@
                     <li class="active">生产单</li>
                 </ol>
             </div>
-            <form class="form-horizontal" action="{% url 'codetime:productForm' %}" method="post">
+            <form class="form-horizontal" action="{% url 'codetime:productForm' %} " method="post" onsubmit="return sumbit_sure()">
             {% csrf_token %}
                 <input type="hidden" name="product_id" value="{{ product.id|default:"0"}}">
                 <div class="contentbody">
@@ -259,7 +259,14 @@
 
     {% block js %}
     <script type="text/javascript">
-
+    function sumbit_sure(){
+        var gnl=confirm("确定要提交?");
+        if (gnl==true){
+            return true;
+        }else{
+            return false;
+        }
+    }
     function doPrint() {
         bdhtml=window.document.body.innerHTML;
         sprnstr="<!--startprint-->";

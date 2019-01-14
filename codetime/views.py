@@ -50,10 +50,24 @@ def loginForm(request):
 def product(request, item_id):
     if str(item_id) == '0':
         return render(request, 'codetime/product.html')
+    elif int(item_id) < 0:
+        product = models.Product.objects.filter(id=abs(int(item_id))).first()
+        product.id = '0'
+        product.text3 = ''
+        # product_form = ProductForm(instance=product)
+        return render(request, 'codetime/product.html', {"product": product})
+    else:
+        product = models.Product.objects.filter(id=item_id).first()
+    # product_form = ProductForm(instance=product)
+        return render(request, 'codetime/product.html', {"product": product})
+
+@auth
+def againProduct(request, item_id):
     product = models.Product.objects.filter(id=item_id).first()
+    product.id = '0'
+    product.text3 = ''
     # product_form = ProductForm(instance=product)
     return render(request, 'codetime/product.html', {"product": product})
-
 
 @auth
 def productForm(request):
