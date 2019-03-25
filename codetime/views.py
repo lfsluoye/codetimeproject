@@ -50,10 +50,24 @@ def loginForm(request):
 def product(request, item_id):
     if str(item_id) == '0':
         return render(request, 'codetime/product.html')
+    elif int(item_id) < 0:
+        product = models.Product.objects.filter(id=abs(int(item_id))).first()
+        product.id = '0'
+        product.text3 = ''
+        # product_form = ProductForm(instance=product)
+        return render(request, 'codetime/product.html', {"product": product})
+    else:
+        product = models.Product.objects.filter(id=item_id).first()
+    # product_form = ProductForm(instance=product)
+        return render(request, 'codetime/product.html', {"product": product})
+
+@auth
+def againProduct(request, item_id):
     product = models.Product.objects.filter(id=item_id).first()
+    product.id = '0'
+    product.text3 = ''
     # product_form = ProductForm(instance=product)
     return render(request, 'codetime/product.html', {"product": product})
-
 
 @auth
 def productForm(request):
@@ -175,7 +189,7 @@ def orderSearch(request):
     page_obj = PageList.Page(current_page, len(dataSource), val)
     data = dataSource[page_obj.start:page_obj.end]
 
-    page_str = page_obj.page_str("")
+    page_str = page_obj.page_str("&text1="+text1+"&text2"+text2+"%text23&"+text23+"&shipments"+status+"&knot"+knot)
     nonReceiveAmount = 0
     receiveAmount = 0
 
@@ -191,6 +205,10 @@ def orderSearch(request):
     backDic = {}
     backDic["dataSource"] = data
     backDic["page_str"] = page_str
+    if len(text1) != 0:
+        condition["text1"] = text1
+    if len(text2) != 0:
+        condition["text2"] = text2
     backDic["condition"] = condition
     backDic["nonReceiveAmount"] = nonReceiveAmount
     backDic["receiveAmount"] = receiveAmount

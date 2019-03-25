@@ -101,7 +101,8 @@
                 <div class="bottomBtn">
                     <button id="order_search" type="submit" class="btn btn-primary">搜索</button>
                     <span> </span>
-                    <button type="button" class="btn btn-danger">重置</button>
+{#                    <button type="button" class="btn btn-danger" >重置</button>#}
+                    <a class="btn btn-danger" href={% url 'codetime:orderSearch' %}>重置</a>
                 </div>
             </div>
             <div class="MytableView">
@@ -149,7 +150,10 @@
                                         <td>
 {#                                           <p><button type="button" class="left m_left"  onclick="editProduct({{ item.id }});">编辑</button></td></p>#}
                                             <p class="left" onclick="editProduct({{ item.id }});"><a>编辑</a></p>
-                                            <button type="button" class="left m_left"  onclick="writeDataToExcel({{ item.id }});">打印</button></td>
+                                            <button type="button" class="left m_left"  onclick="writeDataToExcel({{ item.id }});">打印</button>
+                                            <p class="left m_left" onclick="againProduct({{ item.id }});"><a>再制</a></p>
+                                        </td>
+
 
                                     </tr>
                                     {% endfor %}
@@ -193,6 +197,27 @@ function editProduct(item_id) {
             debugger;
             if(data == 'OK'){
                 window.location.href = "../product/" + item_id
+            }
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+            console.log(XMLHttpRequest.status);
+            console.log(XMLHttpRequest.readyState);
+            console.log(textStatus);
+        },
+    });
+}
+function againProduct(item_id) {
+
+    $.ajax({
+        method: 'GET',
+        url: "/codetime/editProduct/",
+        data: {
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+        },
+        success: function(data) {
+            debugger;
+            if(data == 'OK'){
+                window.location.href = "../product/" + (-item_id)
             }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
