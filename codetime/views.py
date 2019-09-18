@@ -225,10 +225,14 @@ def writeOrderToExcel(request):
     # 默认可读写，若有需要可以指定write_only和read_only为True
     wb = load_workbook('productModel.xlsx')
     sheet = wb.active
+    # 客户
     sheet['B3'] = product_obj.text1
+    # 业务
     sheet['B4'] = product_obj.text2
-    sheet['H4'] = product_obj.text3
+    # 印刷版本号
+    sheet['H3'] = product_obj.text3
     # sheet['G4'] = product_obj.amount
+    # 产品名称
     sheet['B7'] = product_obj.text5
     sheet['B8'] = product_obj.text6
     sheet['B9'] = product_obj.text7
@@ -240,22 +244,27 @@ def writeOrderToExcel(request):
     sheet['B15'] = product_obj.text27
     sheet['B16'] = product_obj.text28
     sheet['B17'] = product_obj.text29
+    # 版面枚数
     sheet['B18'] = product_obj.text30
-    sheet['B20'] = product_obj.text11
-    sheet['B21'] = product_obj.text12
-    sheet['B22'] = product_obj.text31
-    sheet['B23'] = product_obj.text13
-    sheet['B24'] = product_obj.text14
-    sheet['B25'] = product_obj.text15
-    sheet['B26'] = product_obj.text16
-    sheet['B27'] = product_obj.text17
-    sheet['B28'] = product_obj.text18
-    sheet['B29'] = product_obj.text19
-    sheet['B30'] = product_obj.text21
+    # 喷码
+    sheet['F7'] = product_obj.text11
+    sheet['F8'] = product_obj.text12
+    sheet['F9'] = product_obj.text31
+    sheet['F10'] = product_obj.text13
+    sheet['F11'] = product_obj.text14
+    sheet['F12'] = product_obj.text15
+    sheet['F13'] = product_obj.text16
+    sheet['F14'] = product_obj.text17
+    sheet['F15'] = product_obj.text18
+    sheet['F16'] = product_obj.text19
+    # 菲林编号
+    # sheet[''] = product_obj.text21
     # sheet['B30'] = product_obj.text20
-    sheet['B31'] = product_obj.text22
-    sheet['E3'] = product_obj.text23
-    sheet['E4'] = product_obj.text24
+    # 刀版编号
+    sheet['F17'] = product_obj.text22
+    sheet['F18'] = product_obj.retention_samples
+    sheet['F3'] = product_obj.text23
+    sheet['F4'] = product_obj.text24
     the_file_name = "tmp.xlsx"
     exist_file = os.path.exists(the_file_name)
     if exist_file:
