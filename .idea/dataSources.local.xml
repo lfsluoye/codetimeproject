@@ -2,7 +2,7 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="Django default" uuid="dbed574e-fb59-454d-96da-fdf1fe334398">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
       <auth-required>false</auth-required>
     </data-source>
   </component>
