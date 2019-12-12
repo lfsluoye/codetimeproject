@@ -9,6 +9,8 @@ from openpyxl import load_workbook
 from decimal import Decimal
 import os
 
+def video(request):
+    return render(request, 'codetime/video.html')
 def jtbq(request):
     return render(request, 'codetime/jtbq.html')
 def code(request):
