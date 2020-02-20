@@ -20,7 +20,7 @@ from django.contrib import admin
 from codetime import views
 urlpatterns = [
     # url(r'^$', views.index, name='index'),
-    url(r'^admin/', admin.site.urls),
+    url(r'^codetime/admin/', admin.site.urls),
     url(r'^codetime/', include('codetime.urls', namespace="codetime")),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
