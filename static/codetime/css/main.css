@@ -61,12 +61,12 @@
 }
 .bodytwo{
 	height: 100%;
-	width: 60%;
-	float: right;
+	width: 50%;
+	float: left;
 }
 .bodybottom{
 	height: 80px;
-	width: 100%;
+	width: auto;
 }
 .labelfont13{
 	font-size: 13px;
