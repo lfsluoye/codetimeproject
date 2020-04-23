@@ -2,10 +2,6 @@ from django.conf.urls import url
 from . import views
 app_name = 'codetime'
 urlpatterns = [
-    url(r'^index/$', views.index, name='index'),
-    url(r'^jtbq/$', views.jtbq, name='jtbq'),
-    url(r'^video/$', views.video, name='video'),
-    url(r'^code/$', views.code, name='code'),
     url(r'^login/$', views.loginForm, name='loginForm'),
     url(r'^product/(?P<item_id>-?\d+)$', views.product, name='product'),
     url(r'^againProduct/(?P<item_id>\d+)$', views.againProduct, name='againProduct'),
