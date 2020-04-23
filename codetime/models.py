@@ -1,4 +1,6 @@
 from django.db import models
+from datetime import datetime
+from django.conf import settings
 
 # Create your models here.
 class Person(models.Model):
@@ -74,6 +76,55 @@ class Product(models.Model):
 	shipments = models.BooleanField(default=False)
 	# 未结款false 未结款 true
 	knot = models.BooleanField(default=False)
+	template_img_url = models.CharField(max_length=256, blank=True, default="")
+	template_img_md5 = models.CharField(max_length=128, blank=True, default="")
 	def __str__(self):
 		return self.text1
+
+class UploadImage(models.Model):
+	class Meta:
+		db_table = "upload_image"
+
+	filename = models.CharField(max_length=256, default="")
+	file_md5 = models.CharField(max_length=128)
+	file_type = models.CharField(max_length=32)
+	file_size = models.IntegerField()
+	created_at = models.DateTimeField(default=datetime.now)
+	update_at = models.DateTimeField(default=datetime.now)
+	userId = models.CharField(max_length=32, blank=True, default="", editable=False)
+
+	@classmethod
+	def getImageByMd5(cls, md5):
+		try:
+			return UploadImage.objects.filter(file_md5=md5).first()
+		except Exception as e:
+			return None
+
+	# 获取本图片的url
+	def getImageUrl(self):
+		filename = self.file_md5 + "." + self.file_type
+		if settings.DEBUG:
+			url = settings.IMAGE_SAVING_URL + filename
+			return url
+		else:
+			url = settings.WEB_IMAGE_SERVER_URL + filename
+			return url
+
+
+	# 获取本图片在本地的位置
+	def getImagePath(self):
+		filename = self.file_md5 + "." + self.file_type
+		if settings.DEBUG:
+			path = settings.IMAGE_SAVING_PATH + filename
+			return path
+		else:
+			path = settings.WEB_IMAGE_SERVER_URL + filename
+			return path
+
+
+	def __str__(self):
+		s = "filename:" + str(self.filename) + " - " + "filetype:" + str(self.file_type) \
+			+ " - " + "filesize:" + str(self.file_size) + " - " + "filemd5:" + str(self.file_md5)
+		return s
+
 

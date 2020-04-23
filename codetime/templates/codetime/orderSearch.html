@@ -194,7 +194,6 @@ function editProduct(item_id) {
             csrfmiddlewaretoken: '{{ csrf_token }}',
         },
         success: function(data) {
-            debugger;
             if(data == 'OK'){
                 window.location.href = "../product/" + item_id
             }
@@ -215,7 +214,6 @@ function againProduct(item_id) {
             csrfmiddlewaretoken: '{{ csrf_token }}',
         },
         success: function(data) {
-            debugger;
             if(data == 'OK'){
                 window.location.href = "../product/" + (-item_id)
             }
@@ -238,7 +236,6 @@ function changeShipments(item_id, item_shipments) {
             item_shipments: item_shipments,
         },
         success: function(data) {
-            debugger;
             console.log('chenggong');
             window.location.reload();
         },
@@ -260,7 +257,6 @@ function changeStatus(item_id, item_status) {
             item_status: item_status,
         },
         success: function(data) {
-            debugger;
             console.log('chenggong');
             window.location.reload();
         },
@@ -283,7 +279,6 @@ function changeKnot(item_id, item_knot) {
             item_knot: item_knot,
         },
         success: function(data) {
-            debugger;
             console.log('chenggong');
             window.location.reload();
         },
@@ -296,7 +291,6 @@ function changeKnot(item_id, item_knot) {
 }
 function writeDataToExcel(item_id) {
 {#    var tt = new Date().getTime();#}
-    debugger;
     var url = '/codetime/writeOrderToExcel/';
     /**
     * 使用form表单来发送请求

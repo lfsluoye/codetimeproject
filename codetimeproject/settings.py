@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = ')xb(r=*ckvkrcaw$-+td)h36w=dgg2_t@=_34lvkj3v@=r652s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = TEMPLATE_DEBUG = False
+DEBUG = TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -64,6 +64,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -113,20 +114,32 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'zh-Hans'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
+# WEB_HOST_NAME = 'http://codetimes.net/'
+
+IMAGE_SIZE_LIMIT = 1024*1024*10
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
 STATIC_ROOT = "/var/codetime/static/"
+
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, 'media').replace('\\', '/'),
 )
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_ROOT = "/var/codetime/media/"
+IMAGE_SAVING_PATH = os.path.join(MEDIA_ROOT, 'upload_images/')
+IMAGE_SAVING_URL = os.path.join(MEDIA_URL, 'upload_images/')
+WEB_IMAGE_SERVER_URL = '/var/codetime/media/upload_images/'
+# WEB_IMAGE_SERVER_PATH = STATIC_ROOT + "codetime/upload_images/"

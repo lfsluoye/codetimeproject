@@ -1,5 +1,6 @@
 from django.conf.urls import url
 from . import views
+from . import uploadImage_views
 app_name = 'codetime'
 urlpatterns = [
     url(r'^login/$', views.loginForm, name='loginForm'),
@@ -12,4 +13,5 @@ urlpatterns = [
     url(r'^changeStatus/$', views.changeStatus, name='changeStatus'),
     url(r'^changeKnot/$', views.changeKnot, name='changeKnot'),
     url(r'^writeOrderToExcel/$', views.writeOrderToExcel, name='writeOrderToExcel'),
+    url(r'^uploadImage/$', uploadImage_views.uploadImage, name='uploadImage'),
 ]
