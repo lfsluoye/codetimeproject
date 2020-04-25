@@ -94,7 +94,7 @@ class UploadImage(models.Model):
 	created_at = models.DateTimeField(default=datetime.now)
 	update_at = models.DateTimeField(default=datetime.now)
 	userId = models.CharField(max_length=32, blank=True, default="", editable=False)
-
+	file_url = models.CharField(max_length=256, blank=True, default="")
 	@classmethod
 	def getImageByMd5(cls, md5):
 		try:
@@ -112,7 +112,7 @@ class UploadImage(models.Model):
 	# 获取本图片在本地的位置
 	def getImagePath(self):
 		filename = self.file_md5 + "." + self.file_type
-		path = os.path.join(settings.MEDIA_ROOT, 'codetime/upload_images/') + filename
+		path = os.path.join(settings.BASE_DIR, 'media/codetime/upload_images/') + filename
 		return path
 
 

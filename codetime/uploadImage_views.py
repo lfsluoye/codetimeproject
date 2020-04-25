@@ -36,7 +36,7 @@ def uploadImage(request):
         uploadImg.file_md5 = md5
         uploadImg.file_type = ext
         uploadImg.userId = userId
-
+        uploadImg.file_url = uploadImg.getImagePath()
         # 保存 文件到磁盘
         with open(uploadImg.getImagePath(), "wb+") as f:
             # 分块写入
