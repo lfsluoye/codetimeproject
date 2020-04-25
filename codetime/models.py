@@ -1,3 +1,5 @@
+import os
+
 from django.db import models
 from datetime import datetime
 from django.conf import settings
@@ -103,23 +105,15 @@ class UploadImage(models.Model):
 	# 获取本图片的url
 	def getImageUrl(self):
 		filename = self.file_md5 + "." + self.file_type
-		if settings.DEBUG:
-			url = settings.IMAGE_SAVING_URL + filename
-			return url
-		else:
-			url = settings.WEB_IMAGE_SERVER_URL + filename
-			return url
+		url = os.path.join(settings.MEDIA_URL, 'codetime/upload_images/') + filename
+		return url
 
 
 	# 获取本图片在本地的位置
 	def getImagePath(self):
 		filename = self.file_md5 + "." + self.file_type
-		if settings.DEBUG:
-			path = settings.IMAGE_SAVING_PATH + filename
-			return path
-		else:
-			path = settings.WEB_IMAGE_SERVER_URL + filename
-			return path
+		path = os.path.join(settings.MEDIA_ROOT, 'codetime/upload_images/') + filename
+		return path
 
 
 	def __str__(self):

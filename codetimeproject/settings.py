@@ -25,8 +25,8 @@ SECRET_KEY = ')xb(r=*ckvkrcaw$-+td)h36w=dgg2_t@=_34lvkj3v@=r652s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = ['*']
-
+# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['47.94.20.178','localhost','0.0.0.0:8000','127.0.0.1']
 
 # Application definition
 
@@ -83,6 +83,7 @@ DATABASES = {
         'USER': 'root', #数据库登录用户名
         'PASSWORD': 'Lfs851003!', #数据库登录密码,我自己修改了
         'HOST': 'localhost', #数据库所在主机（公司中写真实主机地址）
+        # 'HOST': '47.104.207.50', #数据库所在主机（公司中写真实主机地址）
         'PORT': '3306', #数据库端口
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
@@ -138,8 +139,3 @@ STATICFILES_DIRS = (
 )
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-# MEDIA_ROOT = "/var/codetime/media/"
-IMAGE_SAVING_PATH = os.path.join(MEDIA_ROOT, 'upload_images/')
-IMAGE_SAVING_URL = os.path.join(MEDIA_URL, 'upload_images/')
-WEB_IMAGE_SERVER_URL = '/var/codetime/media/upload_images/'
-# WEB_IMAGE_SERVER_PATH = STATIC_ROOT + "codetime/upload_images/"
