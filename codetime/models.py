@@ -112,8 +112,9 @@ class UploadImage(models.Model):
 	# 获取本图片在本地的位置
 	def getImagePath(self):
 		filename = self.file_md5 + "." + self.file_type
-		path = os.path.join(settings.BASE_DIR, 'media/codetime/upload_images/') + filename
+		path = os.path.join(settings.MEDIA_ROOT, 'codetime/upload_images/') + filename
 		return path
+
 
 
 	def __str__(self):
